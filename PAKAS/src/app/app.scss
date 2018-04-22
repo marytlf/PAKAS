@@ -14,3 +14,52 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+page-home {
+    //background-color: #542e50;
+    background-color: #352a69;
+
+    .bgn-t {
+        background-color: transparent !important;
+    }
+}
+
+.form-group {
+   border-radius: 30px;
+   text-align:center;
+   bottom: -300px;
+
+
+   input{
+       height: 80%;
+       width: 30px;
+   }
+}
+
+
+.btn-group {
+    display: flex;
+
+    button {
+        bottom: -300px;
+        box-shadow: none;
+    }
+
+    button:active{
+        background-color: #02b89a;
+    }
+
+    .btn-left {
+        border-radius: 30px;
+        margin-right: 0;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .btn-right {
+        border-radius: 30px;
+        margin-left: 0;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}

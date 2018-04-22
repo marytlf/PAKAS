@@ -10,7 +10,7 @@ $font-path: "../assets/fonts";
 // rtl styles in your app. For more info, please see:
 // http://ionicframework.com/docs/theming/rtl-support/
 $app-direction: ltr;
-
+@import url('https://fonts.googleapis.com/css?family=Arimo|Bree+Serif|Cinzel|Nunito|Passion+One|Quicksand');
 
 @import "ionic.globals";
 
@@ -21,8 +21,6 @@ $app-direction: ltr;
 // the Sass variables found in Ionic's source scss files.
 // To view all the possible Ionic variables, see:
 // http://ionicframework.com/docs/theming/overriding-ionic-variables/
-
-
 
 
 // Named Color Variables
@@ -42,14 +40,14 @@ $colors: (
   navBar:    #542e50,
   navBarLight: #81587c,
   navBarDark: #2a0628,
-  magPurple: #6D214F
+  magPurple: #6D214F,
+  colorPrimary: #352a69,
 );
 
 
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
-
 
 
 

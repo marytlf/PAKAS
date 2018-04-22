@@ -1,28 +1,24 @@
-page-home {
-    background-color: #542e50;
-
-    .bgn-t {
-        background-color: transparent !important;
-    }
+home-page{
+    ion-avatar img  {
+        width:100% !important;
+        height : 100% !important;
+        max-width: 100px !important;  //any size
+        max-height: 100px !important; //any size
+        }
 }
 
+.logo-pakas{
+    background: transparent !important;
+    border: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
 
-.btn-group {
-    display: flex;
-
-    button {
-        box-shadow: none;
-    }
-
-    .btn-left {
-        margin-right: 0;
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
-    }
-
-    .btn-right {
-        margin-left: 0;
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-    }
+.forget-label{
+    text-align: right;
+    color: #02b89a;
+    top: 230px;
+    position: relative;
+    font-family: 'Passion One', cursive;
 }
