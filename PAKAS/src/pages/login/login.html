@@ -1,22 +1,36 @@
-<!--
-  Generated template for the LoginPage page.
+<!-- /**<a href="https://br.freepik.com/vetores-gratis/lama-retrato-plano_1113514.htm">Projetado pelo Freepik</a>**/ -->
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>Login</ion-title>
-  </ion-navbar>
-
-</ion-header>
+<ion-list class="logo-pakas">
+  <img [src] = "logopakas">
+</ion-list>
 
 
-<ion-content padding>
+  <ion-content padding class="bgn-t">
+
+    <ion-list> 
+        <ion-item class="form-group" color = "transparent">
+            <ion-label floating>Username</ion-label>
+            <ion-input type = "text"></ion-input>
+        </ion-item>
+        
+        <ion-item class="form-group">
+            <ion-label floating>Password</ion-label>
+            <ion-input type = "password"></ion-input>
+        </ion-item>
+    </ion-list>
+  
+    
+    <div class="btn-group">
+        <button class="btn-left" ion-button full color = "colorPrimary" (click) = "abrir('DashboardPage')">Entrar</button>
+    
+        <button class="btn-right"  ion-button full color = "colorPrimary">Registrar</button>
+    </div>
+    <ion-list class="forget-label">
+        <ion-label >Esqueci minha senha!</ion-label>
+    </ion-list>
+  </ion-content>
 
   
 
-</ion-content>
 
 

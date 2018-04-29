@@ -1,3 +1,68 @@
 page-dashboard {
 
 }
+
+
+.sidenav{
+    height: 100%;
+    height: 100%; /* 100% Full-height */
+    width: 0px; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    right: 0px;
+    background-color: #352a69; /* Black*/
+    overflow-x: hidden; /* Disable  scroll */
+    overflow-y: hidden;
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 15px;
+    color: "activeColor";
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color:"textColor";
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    font-size: 36px;
+    margin-left: 60px;
+}
+
+
+.sidebutton {
+    background-color: #352a69 !important;
+    height: 100%; /* 100% Full-height */
+    width: 25px; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 0; /* Stay on top */
+    top: 0px; /* Stay at the top */
+    right: 0px;
+    margin: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    border: transparent !important;
+    .sidebutton{
+        -webkit-transform: rotate(-90deg);
+    }
+    .button-md{
+        height: 900px;
+        color: transparent!important;
+        background-color: transparent !important;
+    }
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
