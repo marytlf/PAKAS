@@ -24,7 +24,7 @@ export class DashboardPage {
   }
 
   openNav() {
-    document.getElementById("mySidenav").style.width = "100px";
+    document.getElementById("mySidenav").style.width = "250px";
     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
   }
 
