@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, App, ViewController } from 'ionic-angular';
 import { ProfilePage } from '../profile/profile';
 
 /**
- * Generated class for the DashboardPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+* Generated class for the DashboardPage page.
+*
+* See https://ionicframework.com/docs/components/#navigation for more info on
+* Ionic pages and navigation.
+*/
 
 @IonicPage()
 @Component({
@@ -15,27 +15,47 @@ import { ProfilePage } from '../profile/profile';
   templateUrl: 'dashboard.html',
 })
 export class DashboardPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  
+  public pagina: any = "";
+  
+  constructor(public navCtrl: NavController, 
+    public navParams: NavParams, 
+    public appCtrl: App,
+    public viewCtrl: ViewController,
+  ) {
   }
-
+  
   ionViewDidLoad() {
     console.log('ionViewDidLoad DashboardPage');
   }
-
+  
   openNav() {
     document.getElementById("mySidenav").style.width = "250px";
     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
   }
-
+  
   closeNav() {
     document.getElementById("mySidenav").style.width = "0px";
     document.body.style.backgroundColor = "transparent";
   }
-
-  openProfile() {
-    this.navCtrl.push(ProfilePage);
+  
+  openNavProfile(){
+    document.getElementById("mySidenav").style.width = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+  }
+  
+  closeNavProfile(){
+    document.getElementById("mySidenav").style.width = "0px";
+    document.body.style.backgroundColor = "transparent";
+  }
+  
+  openProfile(paginaPar){
+    this.pagina = paginaPar;
+    this.appCtrl.getRootNav().setRoot(this.pagina);
   }
 
-
+  back(){
+    this.appCtrl.goBack();
+  }
+  
 }

@@ -16,6 +16,63 @@
 // automatically applied to the <body> element in the app.
 
 
+.input-group{
+    color: "activeColor";
+    font-family: "Nunito";
+    font-size: 15px;
+    text-align: center;
+    background-color: transparent !important;
+    input{
+        height: 80%;
+        width: 30px;
+        background-color: transparent !important;
+        color: "activeColor";
+        text-decoration-color: "textColor"
+    }
+}
+
+.input-group:hover{
+    color: "textColor";
+}
 
 
 
+.btn-nav{
+    background-color: "activeColor";
+    display: flex;
+    width: 50px;
+    size: 20px;
+
+    button{
+        color: "textColor";
+        background-color: #02b89a;
+        box-shadow:#FD7272;
+        padding: 15px;  
+    }
+    .button-md:hover{
+        background-color: #FD7272,
+    }
+
+    .button-back{
+        top: 0px;
+        position: absolute;
+        left: 0px;
+        font-size: 25px;
+    }
+    .button-ok{
+        top: 0px;
+        position: absolute;
+        right: 0px;
+        font-size: 25px;
+    }
+    
+}
+
+.title-group{
+    text-align: center;
+    color: "textColor";
+    font-family: 'Nunito';
+    font-weight: 20px;
+    height: 40px;
+    padding: 0px;
+}

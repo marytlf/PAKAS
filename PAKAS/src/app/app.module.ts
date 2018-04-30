@@ -3,18 +3,13 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
-
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ProfilePage } from '../pages/profile/profile'
-import { DashboardPage } from '../pages/dashboard/dashboard';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ProfilePage,
-    DashboardPage
   ],
   imports: [
     BrowserModule,
@@ -30,8 +25,6 @@ import { DashboardPage } from '../pages/dashboard/dashboard';
   entryComponents: [
     MyApp,
     HomePage,
-    ProfilePage,
-    DashboardPage
   ],
   providers: [
     StatusBar,

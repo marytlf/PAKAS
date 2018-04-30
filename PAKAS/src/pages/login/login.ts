@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, App } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, App, ModalController, ToastController } from 'ionic-angular';
 import { setupPreloadingImplementation } from 'ionic-angular/util/module-loader';
-import { DashboardPage } from '../dashboard/dashboard';
+import { EsqueciPassPage } from '../esqueci-pass/esqueci-pass';
 /**
  * Generated class for the LoginPage page.
  *
@@ -17,20 +17,31 @@ import { DashboardPage } from '../dashboard/dashboard';
 export class LoginPage {
 
   public logopakas = 'assets/imgs/pakas2.png';
+  public pagina :any = "";
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public appCtrl: App) {
-  
+  constructor(public navCtrl: NavController, 
+    public navParams: NavParams, 
+    public appCtrl: App, 
+    public modalCtrl: ModalController,
+    public toastCtrl: ToastController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
   }
 
-  abrir(pagina){
-    this.appCtrl.getRootNav().setRoot(DashboardPage);
+  open(paginaPar){
+    this.pagina = paginaPar;
+    this.appCtrl.getRootNav().setRoot(this.pagina);
   }
 
-  fechar(){
-    this.appCtrl.goBack();
+  forgotPassword(){
+    let remember = this.modalCtrl.create("EsqueciPassPage",{email: ''});
+
+    remember.onDidDismiss( retorno =>{
+      console.log("Modal");
+      })
+    remember.present();
   }
+
 }

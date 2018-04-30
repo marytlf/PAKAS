@@ -1,23 +1,46 @@
-<div id="mySidenav" div class="sidenav">
-  <a class="closebtn" (click)="closeNav()">
-    &times;
-  </a>
-  <a href="#" (click) = "openProfile()" >Perfil</a>
-  <a href="#">Criar Comunidade</a>
-  <a href="#">Comunidades que eu sigo</a>
-  <a href="#">Comunidades criadas por mim</a>
-  <a href="#">Lista de Comunidades</a>
-  <a href="#">Tópicos criados por mim</a>
-  <a href="#">Tópicos que eu sigo</a>
+<div class = "btn-forgot">
+		<button class="button-back" ion-button (click) = "openProfile('ProfilePage')">
+			<ion-icon name = "md-glasses" >
+			</ion-icon>
+		</button>
+	</div>
 
+
+<div id="mySidenav" div class="sidenav">
+	<a class="closebtn" (click)="closeNav()">
+		&times;
+	</a>
+	<ion-list>
+		<ion-item>
+				<a href="#" (click) = "openProfile('ProfilePage')">Perfil</a>
+		</ion-item>
+		<ion-item>
+				<a href="#" (click) = "includeComunity()" >Criar Comunidade</a>
+		</ion-item>	
+		<ion-item>
+				<a href="#" (click) = "listFollowedComunity()" >Comunidades que eu sigo</a>
+		</ion-item>
+		<ion-item>
+				<a href="#" (click) = "listMyComunity()" >Comunidades criadas por mim</a>
+		</ion-item>	
+		<ion-item>
+				<a href="#" (click) = "listAllComunity()" >Lista de Comunidades</a>
+		</ion-item>
+		<ion-item>
+				<a href="#" (click) = "listMyTopics()" >Tópicos criados por mim</a>
+		</ion-item>
+		<ion-item>
+			<a href="#" (click) = "listFollowedTopics()" >Tópicos que eu sigo</a>
+		</ion-item>
+	</ion-list>
+	
 </div>
 
 <div id="main">
-
-  <div class="sidebutton">
-      <button ion-button full block (click)="openNav()"></button>
-  </div>
-    
-
-
+	
+	<div class="sidebutton">
+		<button ion-button full block (click)="openNav()"></button>
+	</div>
+	
+	
 </div>

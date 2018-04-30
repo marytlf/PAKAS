@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, App, ViewController } from 'ionic-angular';
 
 /**
  * Generated class for the ProfilePage page.
@@ -14,12 +14,25 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'profile.html',
 })
 export class ProfilePage {
+  public pagina: any = "ProfilePage";
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, 
+    public navParams: NavParams,
+    public viewCtrl: ViewController,
+    public appCtrl: App) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ProfilePage');
+  }
+
+  open(){
+    this.appCtrl.getRootNav().setRoot("ProfilePage");
+    this.navCtrl.push(this.pagina);
+  }
+
+  back(){
+    this.navCtrl.setRoot("DashboardPage");
   }
 
 }
