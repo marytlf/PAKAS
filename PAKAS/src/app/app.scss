@@ -76,3 +76,33 @@
     height: 40px;
     padding: 0px;
 }
+
+.btn-menu{
+    color: #352a69;
+    background-color:#02b89a;
+    text-align: center;
+    border-radius: 6px;
+    :hover{
+        background-color: #FD7272;
+        border-left-color:  #FD7272;
+        border-right-color:  #FD7272;
+
+    }
+    .button-inner{
+
+        border-top-width: 30px;
+        background-color: #02b89a;
+    }
+}
+
+
+
+
+.item-md .item-button{
+    padding: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    height: 25px;
+    font-size: 13px;
+    font-family: 'Nunito';
+}

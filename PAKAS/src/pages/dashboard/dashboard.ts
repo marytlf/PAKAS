@@ -17,6 +17,7 @@ import { ProfilePage } from '../profile/profile';
 export class DashboardPage {
   
   public pagina: any = "";
+  public profile: any = "";
   
   constructor(public navCtrl: NavController, 
     public navParams: NavParams, 
@@ -48,12 +49,12 @@ export class DashboardPage {
     document.getElementById("mySidenav").style.width = "0px";
     document.body.style.backgroundColor = "transparent";
   }
-  
+ 
   openProfile(paginaPar){
     this.pagina = paginaPar;
     this.appCtrl.getRootNav().setRoot(this.pagina);
   }
-
+  
   back(){
     this.appCtrl.goBack();
   }
