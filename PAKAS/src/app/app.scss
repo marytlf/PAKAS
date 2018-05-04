@@ -65,7 +65,6 @@
         right: 0px;
         font-size: 25px;
     }
-    
 }
 
 .title-group{
@@ -74,35 +73,59 @@
     font-family: 'Nunito';
     font-weight: 20px;
     height: 40px;
-    padding: 0px;
+    padding-bottom: 0px;
 }
 
 .btn-menu{
-    color: #352a69;
-    background-color:#02b89a;
+    color: #02b89a;
+    background-color: transparent!important;
     text-align: center;
     border-radius: 6px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0px 0px 0px 0px;
+    width: -webkit-fill-available;
     :hover{
         background-color: #FD7272;
         border-left-color:  #FD7272;
         border-right-color:  #FD7272;
-
     }
-    .button-inner{
-
-        border-top-width: 30px;
-        background-color: #02b89a;
+    .item-md .item-button{
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 0px;
+        padding-right: 0px;
+        font-size: 13px;
+        font-family: 'Nunito';
+        :hover{
+            background-color: #FD7272;
+            border-left-color:  #FD7272;
+            border-right-color:  #FD7272;
+        }
     }
 }
 
+.label .label-md{
+    padding: 0px 0px;
+
+}
+
+.material-icons{
+    text-align: left;
+}
 
 
+@font-face {
+  font-family: "Ionicons";
+  src: url("../assets/fonts/ionicons.woff2?v=3.0.0-alpha.3") format("woff2"), url("../assets/fonts/ionicons.woff?v=3.0.0-alpha.3") format("woff"), url("../assets/fonts/ionicons.ttf?v=3.0.0-alpha.3") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 
-.item-md .item-button{
-    padding: 0px;
-    padding-left: 0px;
-    padding-right: 0px;
-    height: 25px;
-    font-size: 13px;
-    font-family: 'Nunito';
+ion-icon {
+  display: inline-block;
+  font-size: 2em;
+  padding-right: 8px;
+  line-height: 2;
+  font-weight: bolder;
 }

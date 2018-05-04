@@ -1,7 +1,7 @@
+
 <div class = "btn-forgot">
 		<button class="button-back" ion-button (click) = "openProfile('ProfilePage')">
-			<ion-icon name = "md-glasses" >
-			</ion-icon>
+			<i class="material-icons">face</i>
 		</button>
 	</div>
 
@@ -12,25 +12,39 @@
 	</a>
 	<ion-list>
 		<ion-item>
-			<button ion-button full class ="btn-menu" (click) = "openProfile('ProfilePage')">Perfil</button>
+				<button ion-button full class ="btn-menu label label-md" (click) = "openProfile('ProfilePage')" >
+				<i class="material-icons">face</i>
+				Perfil</button>
 		</ion-item>
 		<ion-item>
-				<button ion-button full class ="btn-menu" (click) = "includeComunity()" >Criar Comunidade</button>
+				<button ion-button full class ="btn-menu label label-md" (click) = "includeComunity('ComunityPage')" >
+				<i class="material-icons">add</i>
+				Criar Comunidade</button>
 		</ion-item>	
 		<ion-item>
-				<button ion-button full class ="btn-menu" (click) = "listFollowedComunity()" >Comunidades que eu sigo</button>
+				<button ion-button full class ="btn-menu label label-md" (click) = "listFollowedComunity()">
+				<i class="material-icons">star</i>
+				Comunidades <br/> que eu sigo</button>
 		</ion-item>
 		<ion-item>
-				<button ion-button full class ="btn-menu" (click) = "listMyComunity()" >Comunidades <br/> criadas por mim</button>
+				<button ion-button full class ="btn-menu label label-md" (click) = "listMyComunity()">
+				<i class="material-icons">favorite_border</i>
+				Comunidades <br/> criadas por mim</button>
 		</ion-item>	
 		<ion-item>
-				<button ion-button full class ="btn-menu" (click) = "listAllComunity()" >Lista de Comunidades</button>
+				<button ion-button full class ="btn-menu label label-md" (click) = "listAllComunity()" >
+				<i class="material-icons">view_list</i>
+				Lista de Comunidades</button>
 		</ion-item>
 		<ion-item>
-				<button ion-button full class ="btn-menu" (click) = "listMyTopics()" >Tópicos criados por mim</button>
+				<button ion-button full class ="btn-menu label label-md" (click) = "listMyTopics()" >
+				<ion-icon name="ios-bookmark-outline" class="ion-icon-menu"></ion-icon>
+				Tópicos <br/> criados por mim</button>
 		</ion-item>
 		<ion-item>
-				<button ion-button full class ="btn-menu" (click) = "listFollowedTopics()" >Tópicos que eu sigo</button>
+				<button ion-button full class ="btn-menu label label-md" (click) = "listFollowedTopics()" >
+				<ion-icon name="ios-bookmarks-outline" class="ion-icon-menu"></ion-icon>
+				Tópicos <br/>que eu sigo</button>
 		</ion-item>
 	</ion-list>
 	
@@ -41,6 +55,5 @@
 	<div class="sidebutton">
 		<button ion-button full block (click)="openNav()"></button>
 	</div>
-	
 	
 </div>

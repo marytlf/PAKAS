@@ -26,10 +26,13 @@ export class ProfilePage {
     console.log('ionViewDidLoad ProfilePage');
   }
 
-  open(){
-    this.appCtrl.getRootNav().setRoot("ProfilePage");
-    this.navCtrl.push(this.pagina);
+
+  open(paginaPar){
+    this.pagina = paginaPar;
+    this.appCtrl.getRootNav().setRoot(this.pagina);
   }
+
+
 
   back(){
     this.navCtrl.setRoot("DashboardPage");

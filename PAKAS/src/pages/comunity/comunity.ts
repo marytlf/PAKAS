@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, App} from 'ionic-angular';
 
 /**
  * Generated class for the TopicoPage page.
@@ -15,11 +15,22 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ComunityPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+    public pagina: any = "";
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ComunityPage');
-  }
+    constructor(public navCtrl: NavController, public navParams: NavParams,
+        public appCtrl: App) {
+    }
 
+    ionViewDidLoad() {
+        console.log('ionViewDidLoad ComunityPage');
+    }
+
+    includeComunity(paginaPar){
+        this.pagina = paginaPar;
+        this.appCtrl.getRootNav().setRoot(this.pagina);
+    }
+
+    back(){
+        this.appCtrl.goBack();
+    }
 }

@@ -57,9 +57,7 @@ $colors: (
 // --------------------------------------------------
 // Material Design only Sass variables can go here
 
-
-
-
+$mdIconProvider: defaultIconSet('my/app/mdi.svg');
 // App Windows Variables
 // --------------------------------------------------
 // Windows only Sass variables can go here
@@ -90,3 +88,5 @@ $colors: (
 
 @import "roboto";
 @import "noto-sans";
+
+

@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, App, ViewController } from 'ionic-angular';
-import { ProfilePage } from '../profile/profile';
-
 /**
 * Generated class for the DashboardPage page.
 *
