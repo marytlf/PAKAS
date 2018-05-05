@@ -1,8 +1,46 @@
 page-dashboard {
+    item-md ion-avatar{
+            margin-right: 0px;
+        }
+
+.badge-group{
+    color: var(--darkPurpleColor);
+    
+    ion-avatar img  {
+        max-width: 100px !important;  //any size
+        max-height: 50px !important; //any size
+        padding: 0px 0px 0px 0px;
+        position: absolute;
+        bottom: 10px;
+    }
+    .image_with_badge_container {
+        display: inline-block; /* keeps the img with the badge if the img is forced to a new line */
+        position: relative;
+        padding: 0px 0px 0px 0px;
+
+        .badge{
+            margin-right: 0px;
+            margin-top: 10px;
+            margin-bottom: 0px;
+            margin-left: 10px;
+        }
+        .badge-on-image:hover{
+            background-color: var(--pinkNeonColor);;
+        }  
+
+    }
+
+    .badge-on-image {
+        position: absolute;
+        background-color: var(--blueNeonColor);
+        bottom: 2px;
+        left: -3px;
+        padding: 0px 6px;
+        border-radius: 60px;
+    }
+ 
 
 }
-
-
 .sidenav{
     height: 100%;
     height: 100%; /* 100% Full-height */
@@ -11,7 +49,7 @@ page-dashboard {
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
     right: 0px;
-    background-color: #352a69; /* Black*/
+    background-color: #352a69; 
     overflow-x: hidden; /* Disable  scroll */
     overflow-y: hidden;
     padding-top: 60px; /* Place content 60px from the top */
@@ -24,8 +62,10 @@ page-dashboard {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 15px;
-    color: #FD7272;
+    color: #FD5B78;
     display: block;
+    opacity: 0.7;
+
     transition: 0.3s;
 }
 
@@ -68,4 +108,9 @@ page-dashboard {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
 }
+
+}
+
+
+
 

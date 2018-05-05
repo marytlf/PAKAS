@@ -14,10 +14,25 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+:root{
+  --primary:    #488aff;
+  --secondary:  #32db64;
+  --danger:     #f53d3d;
+  --light:      #f4f4f4;
+  --dark:       #222;
+  --navBar:    #542e50;
+  --navBarLight: #dabdd6;
+  --navBarDark: #2a0628;
+  --magPurple: #6D214F;
+  --darkPurpleColor: #352a69;
+  --pinkNeonColor: #FD5B78;
+  --blueNeonColor: #00E3BE;
+  --textWhiteColor: white;
+}
 
 
 .input-group{
-    color: "activeColor";
+    color: var(--pinkNeonColor);
     font-family: "Nunito";
     font-size: 15px;
     text-align: center;
@@ -26,38 +41,38 @@
         height: 80%;
         width: 30px;
         background-color: transparent !important;
-        color: "activeColor";
-        text-decoration-color: "textColor"
+        color: var(--pinkNeonColor);
+        text-decoration-color: var(--pinkNeonColor);
     }
 }
 
 .input-group:hover{
-    color: "textColor";
+    color: var(--pinkNeonColor);
 }
 
 
 
 .btn-nav{
-    background-color: "activeColor";
+    background-color: var(--blueNeonColor);
     display: flex;
     width: 50px;
     size: 20px;
 
     button{
-        color: "textColor";
-        background-color: #02b89a;
-        box-shadow:#FD7272;
+        color: var(--textWhiteColor);
+        background-color: var(--blueNeonColor);
+        box-shadow:#FD5B78;
         padding: 15px;  
     }
     .button-md:hover{
-        background-color: #FD7272,
+        background-color: #FD5B78;
     }
 
     .button-back{
         top: 0px;
         position: absolute;
         left: 0px;
-        font-size: 25px;
+        font-size: 10px;
     }
     .button-ok{
         top: 0px;
@@ -68,8 +83,8 @@
 }
 
 .title-group{
-    text-align: center;
-    color: "textColor";
+    text-align: left;
+    color: var(--darkPurpleColor);
     font-family: 'Nunito';
     font-weight: 20px;
     height: 40px;
@@ -77,20 +92,23 @@
 }
 
 .btn-menu{
-    color: #02b89a;
+    color: var(--textWhiteColor);
     background-color: transparent!important;
-    text-align: center;
+    outline-color: transparent!important;
+    border-color: transparent!important;
+    text-align: right;
     border-radius: 6px;
     padding-left: 0px;
     padding-right: 0px;
     margin: 0px 0px 0px 0px;
     width: -webkit-fill-available;
     :hover{
-        background-color: #FD7272;
-        border-left-color:  #FD7272;
-        border-right-color:  #FD7272;
+        border-color: var(--blueNeonColor);
+        background-color: var(--pinkNeonColor);
+        color: var(--textWhiteColor);
     }
     .item-md .item-button{
+        border-bottom: 0px;
         padding-top: 15px;
         padding-bottom: 15px;
         padding-left: 0px;
@@ -98,20 +116,27 @@
         font-size: 13px;
         font-family: 'Nunito';
         :hover{
-            background-color: #FD7272;
-            border-left-color:  #FD7272;
-            border-right-color:  #FD7272;
+            background-color: transparent!important;
+            border-left-color:  var(--pinkNeonColor);
+            border-right-color: var(--pinkNeonColor);
+
         }
     }
+    .button-inner{
+        justify-content: flex-end;
+    }
+    
 }
 
 .label .label-md{
-    padding: 0px 0px;
-
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
 }
 
 .material-icons{
-    text-align: left;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 
@@ -125,7 +150,68 @@
 ion-icon {
   display: inline-block;
   font-size: 2em;
-  padding-right: 8px;
+  padding-left: 8px;
   line-height: 2;
   font-weight: bolder;
+}
+
+.btn-group {
+    display: flex;
+    position: relative;
+    bottom: -240px;
+
+    .button-md{
+        box-shadow: none;
+        border-radius: 60px;
+        background-color: var(--darkPurpleColor);
+        padding: 0px 0px 0px 0px;
+        color: var(--textWhiteColor);
+        border-width: 1px;
+        border-style: solid;
+        border-radius: 60px;
+        border-color: var(--blueNeonColor);
+        /* color: #488aff; */
+        background-color: transparent;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+    :hover{
+        color: var(--darkPurpleColor);
+        background-color: var(--pinkNeonColor)
+    }
+
+    button:active{
+        box-shadow: #02b89a;
+        animation-duration: 2ms;
+        outline:none;
+        background-color:#02b89a;
+    }
+
+    .button-outline-md{
+        border-width: 1px;
+        border-style: solid;
+        border-radius: 60px;
+        border-color: var(--blueNeonColor);
+        /* color: #488aff; */
+        background-color: transparent;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        :hover{
+            border-color: var(--pinkNeonColor) ;
+        }
+    }
+
+}
+
+.list-md .item-block .item-inner{
+    padding-right: 8px;
+    border-bottom: 0px solid;
+}
+
+.lbl-style{
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--textWhiteColor);
+    height: 40%;
+    margin: 0px 0px 0px 0px;
 }

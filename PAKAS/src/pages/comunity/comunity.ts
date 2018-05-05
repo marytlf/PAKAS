@@ -15,7 +15,8 @@ import { IonicPage, NavController, NavParams, App} from 'ionic-angular';
 })
 export class ComunityPage {
 
-    public pagina: any = "";
+    public logopakas = 'assets/imgs/pakas2.png';
+    public pagina: any = "ComunityPage";
 
     constructor(public navCtrl: NavController, public navParams: NavParams,
         public appCtrl: App) {
@@ -25,12 +26,12 @@ export class ComunityPage {
         console.log('ionViewDidLoad ComunityPage');
     }
 
-    includeComunity(paginaPar){
+    open(paginaPar){
         this.pagina = paginaPar;
         this.appCtrl.getRootNav().setRoot(this.pagina);
     }
 
     back(){
-        this.appCtrl.goBack();
+        this.navCtrl.setRoot("DashboardPage");
     }
 }

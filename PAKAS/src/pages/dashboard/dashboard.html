@@ -1,6 +1,6 @@
 
 <div class = "btn-forgot">
-		<button class="button-back" ion-button (click) = "openProfile('ProfilePage')">
+		<button class="button-back" ion-button (click) = "open('ProfilePage')">
 			<i class="material-icons">face</i>
 		</button>
 	</div>
@@ -12,39 +12,68 @@
 	</a>
 	<ion-list>
 		<ion-item>
-				<button ion-button full class ="btn-menu label label-md" (click) = "openProfile('ProfilePage')" >
-				<i class="material-icons">face</i>
-				Perfil</button>
+				<button ion-button outline class ="btn-menu label label-md" (click) = "open('ProfilePage')" >
+				Perfil <i class="material-icons">face</i></button>
 		</ion-item>
 		<ion-item>
-				<button ion-button full class ="btn-menu label label-md" (click) = "includeComunity('ComunityPage')" >
-				<i class="material-icons">add</i>
-				Criar Comunidade</button>
+				<button ion-button outline class ="btn-menu label label-md" (click) = "open('ComunityPage')" >
+				Criar Comunidade<i class="material-icons">add</i></button>
 		</ion-item>	
 		<ion-item>
-				<button ion-button full class ="btn-menu label label-md" (click) = "listFollowedComunity()">
-				<i class="material-icons">star</i>
-				Comunidades <br/> que eu sigo</button>
+				<button ion-button outline class ="btn-menu label label-md" (click) = "listFollowedComunity()">
+				Comunidades <br/> que eu sigo  <i class="material-icons">star</i></button>
 		</ion-item>
 		<ion-item>
-				<button ion-button full class ="btn-menu label label-md" (click) = "listMyComunity()">
-				<i class="material-icons">favorite_border</i>
-				Comunidades <br/> criadas por mim</button>
+				<button ion-button outline class ="btn-menu label label-md" (click) = "listMyComunity()">
+				Comunidades <br/> criadas por mim  <i class="material-icons">favorite_border</i></button>
 		</ion-item>	
 		<ion-item>
-				<button ion-button full class ="btn-menu label label-md" (click) = "listAllComunity()" >
-				<i class="material-icons">view_list</i>
-				Lista de Comunidades</button>
+				<button ion-button outline class ="btn-menu label label-md" (click) = "listAllComunity()" >
+				Lista de Comunidades <i class="material-icons">view_list</i></button>
 		</ion-item>
 		<ion-item>
-				<button ion-button full class ="btn-menu label label-md" (click) = "listMyTopics()" >
-				<ion-icon name="ios-bookmark-outline" class="ion-icon-menu"></ion-icon>
-				Tópicos <br/> criados por mim</button>
+				<button ion-button outline class ="btn-menu label label-md" (click) = "listMyTopics()" >
+				Tópicos <br/> criados por mim <i class="material-icons">assignment</i>
+				</button>
 		</ion-item>
 		<ion-item>
-				<button ion-button full class ="btn-menu label label-md" (click) = "listFollowedTopics()" >
-				<ion-icon name="ios-bookmarks-outline" class="ion-icon-menu"></ion-icon>
-				Tópicos <br/>que eu sigo</button>
+				<button ion-button outline class ="btn-menu label label-md" (click) = "listFollowedTopics()" >
+				Tópicos <br/>que eu sigo <i class="material-icons">library_books</i>
+				</button>
+		</ion-item>
+
+		<ion-item>
+			<ion-label class="lbl-style">
+				Últimas Atualizações
+			</ion-label>
+		</ion-item>
+
+		<ion-item class = "badge-group">
+
+			<div class="image_with_badge_container">
+				<ion-avatar item-start class="badge">
+				  	<img src="assets/imgs/alp1.png" class="ion-avatar-mg">
+				</ion-avatar>
+				<span class="badge badge-on-image">7</span>
+			</div>
+				<div class="image_with_badge_container">
+				<ion-avatar item-start class="badge">
+				  	<img src="assets/imgs/alp2.png" class="ion-avatar-mg">
+				</ion-avatar>
+				<span class="badge badge-on-image">2</span>
+			</div>
+				<div class="image_with_badge_container">
+				<ion-avatar item-start class="badge">
+				  	<img src="assets/imgs/alp3.png" class="ion-avatar-mg">
+				</ion-avatar>
+				<span class="badge badge-on-image">4</span>
+			</div>
+			<div class="image_with_badge_container">
+				<ion-avatar item-start class="badge">
+				  	<img src="assets/imgs/alp4.png" class="ion-avatar-mg">
+				</ion-avatar>
+				<span class="badge badge-on-image">9</span>
+			</div>
 		</ion-item>
 	</ion-list>
 	

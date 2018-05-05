@@ -6,12 +6,15 @@ page-login{
         max-height: 100px !important; //any size
         }
     //background-color: #542e50;
-    background-color: #352a69;
+    background-color: var(--darkPurpleColor);
 
     .bgn-t {
         background-color: transparent !important;
     }
 
+    .list-md .item-input:last-child{
+        border-bottom: 0px solid;
+   }
 }
 .scroll-content{
     overflow-y: hidden;
@@ -20,7 +23,7 @@ page-login{
 .form-group {
     border-radius: 30px;
     text-align:center;
-    bottom: -300px;
+    bottom: -250px;
     color:#FD7272;
     
     
@@ -28,51 +31,15 @@ page-login{
        height: 80%;
        width: 30px;
        background-color: transparent !important;
-       color: "activeColor";
+       color: var(--textWhiteColor);
    }
    
 }
 
 
-.btn-group {
-    display: flex;
-
-    button {
-        bottom: -320px;
-        box-shadow: none;
-    }
-
-    button:hover{
-        color: #FD7272;
-    }
-
-    button:active{
-        box-shadow: #02b89a;
-        animation-duration: 2ms;
-        outline:none;
-        background-color:#02b89a;
-    }
-
-
-    .btn-left {
-        border-radius: 30px;
-        margin-right: 0;
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
-    }
-
-    .btn-right {
-        border-radius: 30px;
-        margin-left: 0;
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-    }
-
-}
-
 .item{
     background-color: transparent !important;
-    text-decoration-color:"activeColor";
+    text-decoration-color: var(--blueNeonColor);
 }
 
 
@@ -81,16 +48,17 @@ page-login{
     border: none;
     width: 100%;
     height: 100%;
+    top: -40px;
     position: absolute;
 }
 
 .forget-label .label-md{
     text-align: right;
-    color: #02b89a;
-    top: 250px;
-    height: 5%;
-    width: 90%;
-    position: relative;
+    color: var(--blueNeonColor);
+    top: 240px;
+    height: 10%;
+    width: 100%;
+    position: relative ;
     font-family: 'Nunito', cursive;
     margin: none;
     margin-top: 0px;
@@ -100,12 +68,13 @@ page-login{
     padding: 0px;
     padding-left: 0px;
     padding-right: 0px;
+
 }
 
 .text-input {
-    color: "textColor";
+    color: var(--darkPurpleColor);
+}
 
-    .text-input-ios{
-    color:#02b89a;
-    }
+.input-cover{
+    border-bottom: 2px solid;
 }

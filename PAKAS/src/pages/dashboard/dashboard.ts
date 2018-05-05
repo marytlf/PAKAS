@@ -16,6 +16,8 @@ export class DashboardPage {
   
   public pagina: any = "";
   public profile: any = "";
+
+  public status = '';
   
   constructor(public navCtrl: NavController, 
     public navParams: NavParams, 
@@ -31,11 +33,13 @@ export class DashboardPage {
   openNav() {
     document.getElementById("mySidenav").style.width = "250px";
     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+
   }
   
   closeNav() {
     document.getElementById("mySidenav").style.width = "0px";
     document.body.style.backgroundColor = "transparent";
+
   }
   
   openNavProfile(){
@@ -48,7 +52,7 @@ export class DashboardPage {
     document.body.style.backgroundColor = "transparent";
   }
  
-  openProfile(paginaPar){
+  open(paginaPar){
     this.pagina = paginaPar;
     this.appCtrl.getRootNav().setRoot(this.pagina);
   }

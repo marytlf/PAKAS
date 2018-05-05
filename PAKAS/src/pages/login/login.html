@@ -9,24 +9,23 @@
 
     <ion-list> 
         <ion-item class="form-group" color = "transparent">
-            <ion-label floating color="textColor">username</ion-label>
+            <ion-label floating>username</ion-label>
             <ion-input type = "text"></ion-input>
         </ion-item>
         
         <ion-item class="form-group">
-            <ion-label floating color="textColor">password</ion-label>
+            <ion-label floating>password</ion-label>
             <ion-input type = "password"></ion-input>
         </ion-item>
     </ion-list>
   
     
     <div class="btn-group">
-
-        <button class="btn-left" ion-button full color = "colorPrimary" (click) = "open('DashboardPage')">Entrar</button>
-    
-        <button class="btn-right"  ion-button full color = "colorPrimary" (click) = "open('CrudUserPage')">Registrar</button>
+        <button ion-button full (click) = "open('DashboardPage')">Entrar</button>
     </div>
-    <ion-list class="forget-label">
+    <ion-list class="forget-label lbl-style">
+        <ion-label block (click) = "open('CrudUserPage')" >Desejo me registrar!</ion-label>
+
         <ion-label block (click) = "forgotPassword()" >Esqueci minha senha!</ion-label>
     </ion-list>
   </ion-content>
