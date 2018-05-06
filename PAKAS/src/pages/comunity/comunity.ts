@@ -15,7 +15,7 @@ import { IonicPage, NavController, NavParams, App} from 'ionic-angular';
 })
 export class ComunityPage {
 
-    public logopakas = 'assets/imgs/pakas2.png';
+    public logopakas = 'assets/imgs/pakas.png';
     public pagina: any = "ComunityPage";
 
     constructor(public navCtrl: NavController, public navParams: NavParams,

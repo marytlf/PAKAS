@@ -1,24 +1,24 @@
+
 <ion-header>
-    <ion-toolbar>
-      <ion-title>
-        <div class = "btn-forgot">
-          <button class="button-back" ion-button (click) = "back()">
-          <ion-icon name = "ios-return-left" >
-          </ion-icon>
-          </button>
+    <ion-toolbar class="title-group">
+        <div class = "btn-nav">
+            <button class="button-back" ion-button (click) = "back()">
+                <i class="material-icons">keyboard_arrow_left</i>
+            </button>
         </div>
-    </ion-title>
     </ion-toolbar>
 </ion-header>
 
 
-<ion-content padding class="bgn-t">
+
+
+<ion-content padding class="bgn-t scroll-content">
     <ion-list> 
-    	<ion-item>
-    		<ion-list class="pakas-insert">
-  				<img [src] = "logopakas">
+        <ion-item>
+            <ion-list class="pakas-insert">
+                <img [src] = "logopakas">
 			</ion-list>
-    	</ion-item>
+        </ion-item>
         <ion-item class="form-group-user">
             <ion-label floating color = "colorPrimary">nome:</ion-label>
             <ion-input type = "text"></ion-input>

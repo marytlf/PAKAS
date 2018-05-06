@@ -1,6 +1,7 @@
 page-comunity {
     .bgn-t {
         background-color: transparent !important;
+        position: relative;
     }
 
     .pakas-insert{
@@ -8,7 +9,9 @@ page-comunity {
     	max-width: 50%;
     	position: relative;
     	margin: auto;
-    	outline-width: 3px;	
+        outline-width: 3px;
+        opacity: 0.3;
+        
     }
 
 }

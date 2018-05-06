@@ -7,27 +7,30 @@
 
   <ion-content padding class="bgn-t">
 
-    <ion-list> 
-        <ion-item class="form-group" color = "transparent">
-            <ion-label floating>username</ion-label>
-            <ion-input type = "text"></ion-input>
-        </ion-item>
-        
-        <ion-item class="form-group">
-            <ion-label floating>password</ion-label>
-            <ion-input type = "password"></ion-input>
-        </ion-item>
-    </ion-list>
+	<ion-list> 
+		<ion-item class="form-group">
+			<ion-label floating>username</ion-label>
+			<ion-input type = "text"></ion-input>
+		</ion-item>
+		
+		<ion-item class="form-group">
+			<ion-label floating>password</ion-label>
+			<ion-input type = "password"></ion-input>
+		</ion-item>
+	</ion-list>
   
-    
-    <div class="btn-group">
-        <button ion-button full (click) = "open('DashboardPage')">Entrar</button>
-    </div>
-    <ion-list class="forget-label lbl-style">
-        <ion-label block (click) = "open('CrudUserPage')" >Desejo me registrar!</ion-label>
+	
+	<div class="btn-group">
+		<button ion-button full (click) = "open('DashboardPage')">Entrar</button>
+	</div>
+	<ion-list class="forget-label lbl-style">
+		<span style="padding-top:30px; padding-bottom:60px; position: relative">
+			<ion-label block (click) = "open('CrudUserPage')" >Desejo me registrar!
+			</ion-label>
+		</span>
 
-        <ion-label block (click) = "forgotPassword()" >Esqueci minha senha!</ion-label>
-    </ion-list>
+		<ion-label block (click) = "forgotPassword()">Esqueci minha senha!</ion-label>
+	</ion-list>
   </ion-content>
 
   

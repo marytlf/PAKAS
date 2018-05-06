@@ -10,14 +10,16 @@ import { IonicPage, NavController, NavParams, App, ViewController } from 'ionic-
 @IonicPage()
 @Component({
   selector: 'page-dashboard',
-  templateUrl: 'dashboard.html',
+  templateUrl: 'dashboard.html'
 })
 export class DashboardPage {
   
   public pagina: any = "";
   public profile: any = "";
-
-  public status = '';
+  
+  public teste: any = 0;
+  
+  public status: boolean = true;
   
   constructor(public navCtrl: NavController, 
     public navParams: NavParams, 
@@ -33,25 +35,13 @@ export class DashboardPage {
   openNav() {
     document.getElementById("mySidenav").style.width = "250px";
     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-
   }
   
   closeNav() {
     document.getElementById("mySidenav").style.width = "0px";
     document.body.style.backgroundColor = "transparent";
-
+    
   }
-  
-  openNavProfile(){
-    document.getElementById("mySidenav").style.width = "250px";
-    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-  }
-  
-  closeNavProfile(){
-    document.getElementById("mySidenav").style.width = "0px";
-    document.body.style.backgroundColor = "transparent";
-  }
- 
   open(paginaPar){
     this.pagina = paginaPar;
     this.appCtrl.getRootNav().setRoot(this.pagina);

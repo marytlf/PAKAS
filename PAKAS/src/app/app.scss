@@ -31,6 +31,7 @@
 }
 
 
+
 .input-group{
     color: var(--pinkNeonColor);
     font-family: "Nunito";
@@ -44,6 +45,9 @@
         color: var(--pinkNeonColor);
         text-decoration-color: var(--pinkNeonColor);
     }
+    :focus{
+        text-decoration-color: var(--pinkNeonColor);
+    }
 }
 
 .input-group:hover{
@@ -55,8 +59,6 @@
 .btn-nav{
     background-color: var(--blueNeonColor);
     display: flex;
-    width: 50px;
-    size: 20px;
 
     button{
         color: var(--textWhiteColor);
@@ -73,6 +75,10 @@
         position: absolute;
         left: 0px;
         font-size: 10px;
+        width: 30px;
+        height: 90%;
+        margin-top: 1px;
+        margin-bottom: 1px;
     }
     .button-ok{
         top: 0px;
@@ -131,6 +137,15 @@
 .label .label-md{
     padding: 0px 0px 0px 0px;
     margin: 0px 0px 0px 0px;
+    :focus{
+        color: var(--pinkNeonColor);
+    }
+    .label-md[floating]:focus{
+        color: var(--pinkNeonColor);
+    }
+}
+.label-md[floating]{
+    color: var(--pinkNeonColor);
 }
 
 .material-icons{
@@ -150,7 +165,7 @@
 ion-icon {
   display: inline-block;
   font-size: 2em;
-  padding-left: 8px;
+  text-align: center;
   line-height: 2;
   font-weight: bolder;
 }
@@ -203,10 +218,7 @@ ion-icon {
 
 }
 
-.list-md .item-block .item-inner{
-    padding-right: 8px;
-    border-bottom: 0px solid;
-}
+
 
 .lbl-style{
     font-weight: 500;
@@ -214,4 +226,9 @@ ion-icon {
     color: var(--textWhiteColor);
     height: 40%;
     margin: 0px 0px 0px 0px;
+}
+
+
+.scroll-content{
+    overflow-y: auto!important;
 }

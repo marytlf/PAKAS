@@ -1,15 +1,12 @@
-
+<div ng-app="myApp" ng-controller="myCtrl">
 <div class = "btn-forgot">
-		<button class="button-back" ion-button (click) = "open('ProfilePage')">
-			<i class="material-icons">face</i>
+		<button class="button-back" ion-button (click) = "open('DashboardPage')">
+			<i class="material-icons">home</i>
 		</button>
 	</div>
 
 
-<div id="mySidenav" div class="sidenav">
-	<a class="closebtn" (click)="closeNav()">
-		&times;
-	</a>
+<div id="mySidenav" div class="sidenav" (click)="closeNav()">
 	<ion-list>
 		<ion-item>
 				<button ion-button outline class ="btn-menu label label-md" (click) = "open('ProfilePage')" >
@@ -78,11 +75,12 @@
 	</ion-list>
 	
 </div>
+</div>
 
 <div id="main">
 	
-	<div class="sidebutton">
+	<div class="sidebutton" id="sidebutton">
 		<button ion-button full block (click)="openNav()"></button>
 	</div>
-	
+
 </div>
