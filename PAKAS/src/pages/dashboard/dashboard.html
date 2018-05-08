@@ -1,86 +1,80 @@
-<div ng-app="myApp" ng-controller="myCtrl">
-<div class = "btn-forgot">
-		<button class="button-back" ion-button (click) = "open('DashboardPage')">
-			<i class="material-icons">home</i>
-		</button>
-	</div>
+<div class="sidenav" id="sidebutton" (swipe)="openNav()">
 
-
-<div id="mySidenav" div class="sidenav" (click)="closeNav()">
-	<ion-list>
-		<ion-item>
-				<button ion-button outline class ="btn-menu label label-md" (click) = "open('ProfilePage')" >
-				Perfil <i class="material-icons">face</i></button>
-		</ion-item>
-		<ion-item>
-				<button ion-button outline class ="btn-menu label label-md" (click) = "open('ComunityPage')" >
-				Criar Comunidade<i class="material-icons">add</i></button>
-		</ion-item>	
-		<ion-item>
-				<button ion-button outline class ="btn-menu label label-md" (click) = "listFollowedComunity()">
-				Comunidades <br/> que eu sigo  <i class="material-icons">star</i></button>
-		</ion-item>
-		<ion-item>
-				<button ion-button outline class ="btn-menu label label-md" (click) = "listMyComunity()">
-				Comunidades <br/> criadas por mim  <i class="material-icons">favorite_border</i></button>
-		</ion-item>	
-		<ion-item>
-				<button ion-button outline class ="btn-menu label label-md" (click) = "listAllComunity()" >
-				Lista de Comunidades <i class="material-icons">view_list</i></button>
-		</ion-item>
-		<ion-item>
-				<button ion-button outline class ="btn-menu label label-md" (click) = "listMyTopics()" >
-				Tópicos <br/> criados por mim <i class="material-icons">assignment</i>
-				</button>
-		</ion-item>
-		<ion-item>
-				<button ion-button outline class ="btn-menu label label-md" (click) = "listFollowedTopics()" >
-				Tópicos <br/>que eu sigo <i class="material-icons">library_books</i>
-				</button>
-		</ion-item>
-
-		<ion-item>
-			<ion-label class="lbl-style">
-				Últimas Atualizações
-			</ion-label>
-		</ion-item>
-
-		<ion-item class = "badge-group">
-
-			<div class="image_with_badge_container">
-				<ion-avatar item-start class="badge">
-				  	<img src="assets/imgs/alp1.png" class="ion-avatar-mg">
-				</ion-avatar>
-				<span class="badge badge-on-image">7</span>
-			</div>
-				<div class="image_with_badge_container">
-				<ion-avatar item-start class="badge">
-				  	<img src="assets/imgs/alp2.png" class="ion-avatar-mg">
-				</ion-avatar>
-				<span class="badge badge-on-image">2</span>
-			</div>
-				<div class="image_with_badge_container">
-				<ion-avatar item-start class="badge">
-				  	<img src="assets/imgs/alp3.png" class="ion-avatar-mg">
-				</ion-avatar>
-				<span class="badge badge-on-image">4</span>
-			</div>
-			<div class="image_with_badge_container">
-				<ion-avatar item-start class="badge">
-				  	<img src="assets/imgs/alp4.png" class="ion-avatar-mg">
-				</ion-avatar>
-				<span class="badge badge-on-image">9</span>
-			</div>
-		</ion-item>
-	</ion-list>
+	<div id="mySidenav" class="sidenav" (click)="closeNav()">
+		<div ion-list class ="ion-list-nav item-inner-group" id ="ion-list-nav">
+			<ion-item >
+					<button ion-button outline class ="btn-menu label label-md" (click) = "open('ProfilePage')" >
+					Perfil <i class="material-icons">face</i></button>
+			</ion-item>
+			<ion-item>
+					<button ion-button outline class ="btn-menu label label-md" (click) = "open('ComunityPage')" >
+					Criar Comunidade<i class="material-icons">add</i></button>
+			</ion-item>	
+			<ion-item>
+					<button ion-button outline class ="btn-menu label label-md" (click) = "open('ComunityListPage')">
+					Comunidades <br/> que eu sigo  <i class="material-icons">star_border</i></button>
+			</ion-item>
+			<ion-item>
+					<button ion-button outline class ="btn-menu label label-md" (click) = "listMyComunity()">
+					Comunidades <br/> criadas por mim  <i class="material-icons">favorite_border</i></button>
+			</ion-item>	
+			<ion-item>
+					<button ion-button outline class ="btn-menu label label-md" (click) = "listAllComunity()" >
+					Lista de Comunidades <i class="material-icons">view_list</i></button>
+			</ion-item>
+			<ion-item>
+					<button ion-button outline class ="btn-menu label label-md" (click) = "listMyTopics()" >
+					Tópicos <br/> criados por mim <i class="material-icons">assignment</i>
+					</button>
+			</ion-item>
+			<ion-item>
+					<button ion-button outline class ="btn-menu label label-md" (click) = "listFollowedTopics()" >
+					Tópicos <br/>que eu sigo <i class="material-icons">library_books</i>
+					</button>
+			</ion-item>
 	
-</div>
-</div>
-
-<div id="main">
+		
+			<div *ngIf="hide">
+				<ion-item>
+					<ion-label class="lbl-style">
+						Últimas Atualizações
+					</ion-label>
+				</ion-item>
+				
+				<div ion-item class = "badge-group" id="badge-group">
 	
-	<div class="sidebutton" id="sidebutton">
-		<button ion-button full block (click)="openNav()"></button>
+					<div class="image_with_badge_container">
+						<ion-avatar item-start class="badge">
+							  <img src="assets/imgs/alp1.png" class="ion-avatar-mg">
+						</ion-avatar>
+						<span class="badge badge-on-image">7</span>
+					</div>
+						<div class="image_with_badge_container">
+						<ion-avatar item-start class="badge">
+							  <img src="assets/imgs/alp2.png" class="ion-avatar-mg">
+						</ion-avatar>
+						<span class="badge badge-on-image">2</span>
+					</div>
+						<div class="image_with_badge_container">
+						<ion-avatar item-start class="badge">
+							  <img src="assets/imgs/alp3.png" class="ion-avatar-mg">
+						</ion-avatar>
+						<span class="badge badge-on-image">4</span>
+					</div>
+					<div class="image_with_badge_container">
+						<ion-avatar item-start class="badge">
+							  <img src="assets/imgs/alp4.png" class="ion-avatar-mg">
+						</ion-avatar>
+						<span class="badge badge-on-image">9</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+			</div>
+			
+	<div id="main" >
+	
 	</div>
 
 </div>

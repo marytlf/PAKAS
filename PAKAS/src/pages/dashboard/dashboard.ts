@@ -19,7 +19,7 @@ export class DashboardPage {
   
   public teste: any = 0;
   
-  public status: boolean = true;
+  public hide: boolean = false;
   
   constructor(public navCtrl: NavController, 
     public navParams: NavParams, 
@@ -33,12 +33,16 @@ export class DashboardPage {
   }
   
   openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("mySidenav").style.width = "260px";
+    document.getElementById("ion-list-nav").style.width = "260px";
+    this.hide = true;
     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
   }
   
   closeNav() {
     document.getElementById("mySidenav").style.width = "0px";
+    document.getElementById("ion-list-nav").style.width = "67px";
+    this.hide = false;
     document.body.style.backgroundColor = "transparent";
     
   }

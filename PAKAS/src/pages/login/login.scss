@@ -58,6 +58,8 @@ page-login{
         box-shadow: none;
     }
 }
+
+
 .scroll-content{
     overflow-y: hidden;
 }
@@ -74,12 +76,7 @@ page-login{
        background-color: transparent !important;
        color: var(--textWhiteColor);
        
-   }
-
-
-
-   
-   
+   }   
 }
 
 
@@ -116,10 +113,10 @@ page-login{
     padding-right: 0px;
     font-weight: bold;
    
+}
 
 .text-input {
     color: var(--darkPurpleColor);
-}
 }
 
 .input-cover{
