@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-toolbar class="title-group">
+      <div class = "btn-nav">
+        <button class="button-back" ion-button (click) = "back()">
+            <i class="material-icons">keyboard_arrow_left</i>
+        </button>
+       </div>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+      <ion-item class="form-group-email">
+          <ion-label floating color = "colorPrimary">email:</ion-label>
+          <ion-input type = "text"></ion-input>
+      </ion-item>
+  </ion-list>
+  <div class = "btn-inside">
+      <button ion-button round block small (click)= "sucess()">
+          Enviar!
+      </button>
+  </div>
+   
+</ion-content>
+  

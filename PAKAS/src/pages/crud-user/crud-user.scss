@@ -1,0 +1,37 @@
+page-crud-user {
+
+    .bgn-t {
+        background-color: transparent !important;
+    }
+}
+
+.form-group-user {
+    border-radius: 0px;
+    text-align:center;
+    color:  var(--darkPurpleColor);
+
+    .item-input .label-md, .item-select .label-md, .item-datetime .label-md{
+        :focus{
+            color: var(--pinkNeonColor);
+        }
+    }
+    
+}
+
+.btn-inside{
+    .button{
+        color: var(--blueNeonColor);
+        outline: 1px;
+        outline-color: var(--blueNeonColor);
+        box-shadow: var(--blueNeonColor);
+        background-color: transparent !important;
+    }
+    :hover{
+        background-color: var(--pinkNeonColor);
+        border-right-color: var(--pinkNeonColor);
+        border-left-color: var(--pinkNeonColor);
+        padding: 0px;
+    }
+}
+
+
