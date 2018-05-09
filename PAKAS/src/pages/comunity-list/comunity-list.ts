@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, App } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, App, ViewController } from 'ionic-angular';
 
 /**
  * Generated class for the ComunityListPage page.
@@ -17,9 +17,12 @@ export class ComunityListPage {
 
   public pagina: any = '';
 
+  public pushPage: any = '';
+
   constructor(public navCtrl: NavController, 
     public navParams: NavParams,
-    public appCtrl: App) {
+    public appCtrl: App,
+    public viewCtrl: ViewController) {
   }
 
   ionViewDidLoad() {
@@ -39,7 +42,7 @@ export class ComunityListPage {
   }
 
   back(){
-    this.navCtrl.setRoot("DashboardPage");
+    this.navCtrl.pop();
   }
 
 

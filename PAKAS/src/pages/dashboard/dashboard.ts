@@ -31,7 +31,32 @@ export class DashboardPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad DashboardPage');
   }
+
+  openNotf(){
+    document.getElementById("mySidenav").style.height = "220px";
+    this.hide = true;
+  }
+  openNavSide() {
+    document.getElementById("ion-list-nav").style.height = "70%";
+    document.getElementById("ion-list-nav").style.paddingTop = "130px";
+    document.getElementById("btn-side").style.height = "90%";
+    document.getElementById("btn-side").style.transform = "rotateZ(-45deg);";
+    // document.getElementById("btn-side").style.transformOrigin = "50% 50% 0";
+    document.getElementById("btn-side").style.webkitTransform = "rotateZ(-90deg)";;
+    // document.getElementById("btn-side").style.webkitTransformOrigin = "50% 50% 0";
+
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    this.hide = false;
+  }
   
+  closeNavSide(){
+    document.getElementById("mySidenav").style.height = "0px";
+    document.getElementById("ion-list-nav").style.height = "0px";
+    this.hide = false;
+    document.body.style.backgroundColor = "transparent";
+    
+  }
+
   openNav() {
     document.getElementById("mySidenav").style.width = "260px";
     document.getElementById("ion-list-nav").style.width = "260px";

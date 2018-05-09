@@ -5,8 +5,12 @@ page-comunity-list {
         .item item-block item-md{
             padding: 0px 0px 0px 0px;
         }
+
         .card-content-md{
+            width: fit-content;
+            margin-right: 100%;
             padding: 0px 0px 0px 0px;
+            padding-right: 100%;
             border-bottom: 10px;
             display: -webkit-inline-flex;
             background-color: transparent!important;
@@ -48,14 +52,14 @@ page-comunity-list {
 
         .card-title-md {
             width: fit-content;
-            font-family: 'Open Sans Regular', sans-serif;
+            font-family: 'Open Sans Semi-Bold', sans-serif;
             display: -webkit-inline-box;
             text-align: left;
             font-size: 2rem;
             line-height: 1.2;
             color: var(--darkPurpleColor);
             margin: 0px 0;
-            padding-right: 50px;
+
             padding-left: 10px;
         }
         .card-md{
@@ -94,31 +98,11 @@ page-comunity-list {
     }
     .mti-group{
         position: relative;
-        display: -webkit-box;
+        display: -webkit-inline-flex;
         color: var(--pinkNeonColor);
         background-color: transparent!important;
         font-family: 'Material Icons';
-        font-weight: normal;
-        font-style: normal;
         font-size: 24px;
-        line-height: 1;
-        letter-spacing: normal;
-        text-transform: none;
-        display: block;
-        white-space: nowrap;
-        word-wrap: normal;
-        margin-left: 1%;
-        margin-right: 40%;
-        margin-top: 1%;
-        margin-bottom: 1%;
+        transform: translateX(600%);
     }
-
-    .list-md > .item-block:last-child ion-label, .list-md > .item-block:last-child .item-inner, .list-md > .item-wrapper:last-child ion-label, .list-md > .item-wrapper:last-child .item-inner{
-        margin-right: 10px;
-    }
-
-
-
 }
-
-
