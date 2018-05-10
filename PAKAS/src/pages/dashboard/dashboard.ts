@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { IonicPage, NavController, NavParams, App, ViewController } from 'ionic-angular';
 /**
 * Generated class for the DashboardPage page.
@@ -13,11 +13,12 @@ import { IonicPage, NavController, NavParams, App, ViewController } from 'ionic-
   templateUrl: 'dashboard.html'
 })
 export class DashboardPage {
-  
+  @ViewChild ('subNav') subNav: NavController;
   public pagina: any = "";
   public profile: any = "";
-  
+  public openbtn: boolean = false;
   public teste: any = 0;
+
   
   public hide: boolean = false;
   
@@ -26,10 +27,12 @@ export class DashboardPage {
     public appCtrl: App,
     public viewCtrl: ViewController,
   ) {
+
   }
   
   ionViewDidLoad() {
     console.log('ionViewDidLoad DashboardPage');
+    console.log(this.subNav)
   }
 
   openNotf(){
@@ -39,14 +42,10 @@ export class DashboardPage {
   openNavSide() {
     document.getElementById("ion-list-nav").style.height = "70%";
     document.getElementById("ion-list-nav").style.paddingTop = "130px";
-    document.getElementById("btn-side").style.height = "90%";
-    document.getElementById("btn-side").style.transform = "rotateZ(-45deg);";
-    // document.getElementById("btn-side").style.transformOrigin = "50% 50% 0";
-    document.getElementById("btn-side").style.webkitTransform = "rotateZ(-90deg)";;
-    // document.getElementById("btn-side").style.webkitTransformOrigin = "50% 50% 0";
-
     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
     this.hide = false;
+    this.openbtn = true;
+
   }
   
   closeNavSide(){
@@ -72,12 +71,13 @@ export class DashboardPage {
     
   }
   open(paginaPar){
-    this.pagina = paginaPar;
-    this.appCtrl.getRootNav().setRoot(this.pagina);
+    // this.pagina = paginaPar;
+    this.subNav.push(paginaPar)
+    //this.appCtrl.getRootNav().setRoot(this.pagina);
   }
   
   back(){
-    this.appCtrl.goBack();
+    this.subNav.pop()
   }
   
 }

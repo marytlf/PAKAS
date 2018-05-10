@@ -16,7 +16,7 @@ import { EsqueciPassPage } from '../esqueci-pass/esqueci-pass';
 })
 export class LoginPage {
 
-  public logopakas = 'assets/imgs/pakas2.png';
+  public logopakas = 'assets/imgs/iconllama.png';
   public pagina :any = "";
 
   constructor(public navCtrl: NavController, 

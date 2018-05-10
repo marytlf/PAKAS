@@ -1,76 +1,70 @@
 
-<div class="btn-side" (click)="openNavSide()">
-	<button ion-button clear icon-only class="mti-nav"  id="btn-side">
-		<i class="material-icon-nav">keyboard_arrow_down</i>
-	</button>
-</div>
-					
+<div class="mti-fab">
+	<ion-fab bottom left>
+		
+		<button color="var(--darkPurpleColor)" ion-fab id="btn-active">
+				<i class="material-icons">add</i>
+		</button>
 
-<div id = "mySidenav">
-	<div ion-list class ="ion-list-nav item-inner-group" id ="ion-list-nav">
-		<ion-item >
-			<button ion-button outline class ="btn-menu label label-md" (click) = "open('ProfilePage')" >
-				<i class="material-icons">face</i></button>
-			</ion-item>
+		<ion-fab-list side="top">
+				<button ion-button outline (click) = "open('ProfilePage')" >
+						<i class="material-icons">face</i>
+				</button>
+				<button ion-button outline (click) = "open('ComunityPage')" >
+						<i class="material-icons">add</i>
+				</button>
+				<button ion-button outline (click) = "open('ComunityListPage')">
+						<i class="material-icons">star_border</i>
+				</button>
 			
-			<ion-item>
-				<button ion-button outline class ="btn-menu label label-md" (click) = "open('ComunityPage')" >
-					<i class="material-icons">add</i></button>
-				</ion-item>	
-				
-				<ion-item>
-					<button ion-button outline class ="btn-menu label label-md" (click) = "open('ComunityListPage')">
-						<i class="material-icons">star_border</i></button>
-					</ion-item>
-					
-					<ion-item>
-						<button ion-button outline class ="btn-menu label label-md" (click) = "listMyComunity()">
-							<i class="material-icons">favorite_border</i></button>
-						</ion-item>	
-						
-						<ion-item>
-							<button ion-button outline class ="btn-menu label label-md" (click) = "listFollowedTopics()" >
-								<i class="material-icons">more_horiz</i>
-							</button>
-						</ion-item>
-					</div>
-				</div>
-				
+				<button ion-button outline (click) = "open('Topics')">
+						<i class="material-icons">favorite_border</i>
+				</button>
+		
+				<button ion-button outline (click) = "back()">
+						<i class="material-icons">more_horiz</i>
+				</button>
+		
+		</ion-fab-list>
+	</ion-fab>
+</div>
 
 
-				<div *ngIf="hide">
-					<ion-item>
-						<ion-label class="lbl-style">
-							Últimas Atualizações
-						</ion-label>
-					</ion-item>
-					
-					<div ion-item class = "badge-group" id="badge-group">
-						
-						<div class="image_with_badge_container">
-							<ion-avatar item-start class="badge">
-								<img src="assets/imgs/alp1.png" class="ion-avatar-mg">
-							</ion-avatar>
-							<span class="badge badge-on-image">7</span>
-						</div>
-						<div class="image_with_badge_container">
-							<ion-avatar item-start class="badge">
-								<img src="assets/imgs/alp2.png" class="ion-avatar-mg">
-							</ion-avatar>
-							<span class="badge badge-on-image">2</span>
-						</div>
-						<div class="image_with_badge_container">
-							<ion-avatar item-start class="badge">
-								<img src="assets/imgs/alp3.png" class="ion-avatar-mg">
-							</ion-avatar>
-							<span class="badge badge-on-image">4</span>
-						</div>
-						<div class="image_with_badge_container">
-							<ion-avatar item-start class="badge">
-								<img src="assets/imgs/alp4.png" class="ion-avatar-mg">
-							</ion-avatar>
-							<span class="badge badge-on-image">9</span>
-						</div>
-					</div>
-				</div>
-				
+
+<div *ngIf="hide">
+	<ion-item>
+		<ion-label class="lbl-style">
+			Últimas Atualizações
+		</ion-label>
+	</ion-item>
+
+	<div ion-item class = "badge-group" id="badge-group">
+
+		<div class="image_with_badge_container">
+			<ion-avatar item-start class="badge">
+				<img src="assets/imgs/alp1.png" class="ion-avatar-mg">
+			</ion-avatar>
+			<span class="badge badge-on-image">7</span>
+		</div>
+		<div class="image_with_badge_container">
+			<ion-avatar item-start class="badge">
+				<img src="assets/imgs/alp2.png" class="ion-avatar-mg">
+			</ion-avatar>
+			<span class="badge badge-on-image">2</span>
+		</div>
+		<div class="image_with_badge_container">
+			<ion-avatar item-start class="badge">
+				<img src="assets/imgs/alp3.png" class="ion-avatar-mg">
+			</ion-avatar>
+			<span class="badge badge-on-image">4</span>
+		</div>
+		<div class="image_with_badge_container">
+			<ion-avatar item-start class="badge">
+				<img src="assets/imgs/alp4.png" class="ion-avatar-mg">
+			</ion-avatar>
+			<span class="badge badge-on-image">9</span>
+		</div>
+	</div>
+</div>
+
+<ion-nav #subNav [root]="pagina"></ion-nav>

@@ -17,55 +17,18 @@ page-dashboard {
         }
 
     }
-
-    .button[icon-only]{
-        font-size: 3em;
-        padding-left: 5px;
-        padding-top: 10px;
-        border-top: 20px;
-        border-bottom: 10px;
-        margin-top: 5%;
-        height: 30%;
-        width: 0px;
-        z-index: 99999;
+    .fab-md{
+        background-color: var(--darkPurpleColor);
     }
 
-    .mti-nav{
- 
-        position: relative;
-        display: -webkit-inline-flex;
-        color: var(--pinkNeonColor);
-        background-color: transparent!important;
-        font-family: 'Material Icons';
+    .mti-fab{
 
-        .material-icon-nav{
-            font-family: "Material Icons";
-            font-weight: normal;
-            font-style: normal;
-            font-size: 40px;
-            line-height: 1;
-            letter-spacing: normal;
-            text-transform: none;
-            display: inline-block;
-            white-space: nowrap;
-            word-wrap: normal;
-            direction: ltr;
-            font-feature-settings: "liga";
-            -webkit-font-smoothing: antialiased;
-        }
+        background-color: var(--darkPurpleColor);
 
-        :hover{
-            transform: translateY(-4px);
-            transform: translateY(4px);
-            animation: 2s;
-        }
-        :focus{
-            transform: rotateZ(45deg);
-            animation: 1s;
-        }
-        
     }
-    
+
+
+
     item-md ion-avatar{
         margin-right: 0px;
     }
