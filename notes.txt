@@ -1,0 +1,19 @@
+ <ion-card>
+        <ion-item text-wrap>
+            <ion-icon name="pizza" item-start></ion-icon>
+            <h2>Activities</h2>
+        </ion-item>
+        <ion-item text-wrap>
+            <ion-list inset>
+                <ion-item>
+                    <p>@username commented on Community</p>
+                </ion-item> 
+                <ion-item>
+                    <p>@username commented on Community</p>
+                </ion-item> 
+                <ion-item>
+                    <p>@username commented on Community</p>
+                </ion-item>
+              </ion-list>
+        </ion-item>
+      </ion-card>
