@@ -1,4 +1,42 @@
 page-dashboard {
+
+    .teste {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        background: #eee;
+        border-top: 1px solid #ccc;
+        position: absolute;
+        bottom: 0;
+        padding: 20px;
+        justify-content: space-between;
+    }
+
+    .mari-nav {
+        width: 50%;
+        text-align: center;
+        display:  flex;
+        align-content: center;
+        justify-content: center;
+    
+    
+    }
+
+    .button-outline-md{
+        border-width: 1px;
+        border-style: solid;
+        border-color: #FD5B78;
+        color: #FD5B78;
+        background-color: transparent;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        padding: 0px 0px 0px 0px;
+
+        .cth-heart{
+            transform-origin: -10px;
+        }
+    }
+
     .ion-list-nav{
         height: 0%;
         //padding-top: 120px;
@@ -133,10 +171,9 @@ page-dashboard {
     @media screen and (max-height: 220px) {
         .sidenav {padding-top: 15px;}
         .sidenav a {font-size: 18px;}
-    }
     
 }
 
-
-
+}
+  
 

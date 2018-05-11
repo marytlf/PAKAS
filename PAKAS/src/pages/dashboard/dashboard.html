@@ -1,13 +1,14 @@
 
-<div class="mti-fab">
-	<ion-fab bottom left>
+
+<div>
+	<ion-fab mini bottom center #fabbtn>
 		
 		<button color="var(--darkPurpleColor)" ion-fab id="btn-active">
 				<i class="material-icons">add</i>
 		</button>
 
-		<ion-fab-list side="top">
-				<button ion-button outline (click) = "open('ProfilePage')" >
+		<ion-fab-list side="top" (click)="fabbtn.close()">
+				<button class="cth-heart" ion-button outline (click) = "open('ProfilePage')">
 						<i class="material-icons">face</i>
 				</button>
 				<button ion-button outline (click) = "open('ComunityPage')" >
@@ -27,8 +28,11 @@
 		
 		</ion-fab-list>
 	</ion-fab>
+	<div class="teste">
+		<div class="mari-nav">Teste 1</div>
+		<div class="mari-nav">Teste 2</div>
+	</div>
 </div>
-
 
 
 <div *ngIf="hide">
@@ -66,5 +70,11 @@
 		</div>
 	</div>
 </div>
+
+<ion-footer>
+	<ion-tabs>
+		<ion-tab tabIcon="list" [root]="pagina" ></ion-tab>
+	</ion-tabs>
+</ion-footer>
 
 <ion-nav #subNav [root]="pagina"></ion-nav>

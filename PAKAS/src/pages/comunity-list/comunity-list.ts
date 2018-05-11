@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, App, ViewController } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams, App, ViewController, FabContainer } from 'ionic-angular';
 
 /**
  * Generated class for the ComunityListPage page.
@@ -14,7 +14,7 @@ import { IonicPage, NavController, NavParams, App, ViewController } from 'ionic-
   templateUrl: 'comunity-list.html',
 })
 export class ComunityListPage {
-
+  @ViewChild ('subNav') subNav: NavController;
   public pagina: any = '';
 
   public pushPage: any = '';
@@ -32,18 +32,15 @@ export class ComunityListPage {
 
 
   open(paginaPar){
-    this.pagina = paginaPar;
-    this.appCtrl.getRootNav().setRoot(this.pagina);
+    this.subNav.push(paginaPar)
   }
-
-  openTest(paginaPar){
-    this.pagina = paginaPar;
-    this.navCtrl.push(paginaPar);
-  }
-
+  
   back(){
-    this.navCtrl.pop();
+    this.subNav.pop();
   }
 
+  close(event, fabbtn: FabContainer){
+      fabbtn.close();
+  }
 
 }

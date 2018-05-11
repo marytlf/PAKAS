@@ -5,4 +5,17 @@ page-profile {
         max-width: 100px !important;  //any size
         max-height: 100px !important; //any size
         }
+
+
+
+        .card-md {
+            padding-top: 50px;
+            margin: 10px;
+            border-radius: 2px;
+            width: calc(100% - 20px);
+            font-size: 1.4rem;
+            background: #fff;
+        }
 }
+
+

@@ -1,54 +1,50 @@
-<ion-header>
+
     <ion-toolbar>
-      <ion-title>
-        <div class = "btn-forgot">
-          <button class="button-back" ion-button (click)="back()">
-          <ion-icon name = "ios-return-left" >
-          </ion-icon>
+
+          <button clear ion-button (click)="back()" no-padding>
+            <i class="material-icons">arrow_back_ios</i>
           </button>
-        </div>
-    </ion-title>
+
     </ion-toolbar>
-</ion-header>
+
 
 
 <ion-slides>
     <ion-slide>
             <ion-item class="form-group-user">
-                    <ion-label floating color = "colorPrimary">username:</ion-label>
+                    <ion-label floating>username:</ion-label>
                     <ion-input type = "text"></ion-input>
                 </ion-item>
                 <ion-item class="form-group-user">
-                    <ion-label floating color = "colorPrimary">nome:</ion-label>
+                    <ion-label floating>nome:</ion-label>
                     <ion-input type = "text"></ion-input>
                 </ion-item>
                 <ion-item class="form-group-user">
-                    <ion-label floating color = "colorPrimary">sobrenome:</ion-label>
+                    <ion-label floating>sobrenome:</ion-label>
                     <ion-input type = "text"></ion-input>
                 </ion-item>
-                
-    </ion-slide>
-    <ion-slide>
 
-            <ion-item class="form-group-user">
-                    <ion-label floating color = "colorPrimary">email:</ion-label>
+                <ion-item class="form-group-user">
+                    <ion-label floating>email:</ion-label>
+                    <ion-input type = "text"></ion-input>
+                </ion-item>
+                </ion-slide>
+            <ion-slide>
+                <ion-item class="form-group-user">
+                    <ion-label floating>senha:</ion-label>
                     <ion-input type = "text"></ion-input>
                 </ion-item>
                 <ion-item class="form-group-user">
-                    <ion-label floating color = "colorPrimary">senha:</ion-label>
-                    <ion-input type = "text"></ion-input>
-                </ion-item>
-                <ion-item class="form-group-user">
-                    <ion-label floating color = "colorPrimary">confirmar senha:</ion-label>
+                    <ion-label floating>confirmar senha:</ion-label>
                     <ion-input type = "text"></ion-input>
                 </ion-item>
                 <ion-item>
-                        <div class = "btn-inside">
-                            <button ion-button round block small (click)= "sucess()">
-                                Enviar!
-                            </button>
-                        </div>
-                    </ion-item>
+                <div class = "btn-inside">
+                    <button ion-button clear outline round block small (click)= "sucess()">
+                        Registrar!
+                    </button>
+                    </div>
+                </ion-item>
     </ion-slide>
 
 </ion-slides>

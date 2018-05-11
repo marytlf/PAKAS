@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ViewController, ToastController } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams, ViewController, ToastController, FabContainer } from 'ionic-angular';
 import { LoginPage } from '../login/login';
 
 /**
@@ -15,6 +15,8 @@ import { LoginPage } from '../login/login';
   templateUrl: 'crud-user.html',
 })
 export class CrudUserPage {
+  @ViewChild ('subNav') subNav: NavController;
+  public pagina: any = "";
 
   public dash: any = "";
 
@@ -41,11 +43,18 @@ export class CrudUserPage {
       position: 'middle'
     });
     toastEmail.present();
-    this.openDash();
+    this.open("DashboardPage")
   }
 
-  openDash(){
-    this.navCtrl.push("DashboardPage");
+  open(paginaPar){
+    this.subNav.push(paginaPar)
   }
+  
+
+  close(event, fabbtn: FabContainer){
+      fabbtn.close();
+  }
+
+
 
 }

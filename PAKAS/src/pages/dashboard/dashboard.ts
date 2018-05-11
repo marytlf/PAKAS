@@ -1,5 +1,7 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
-import { IonicPage, NavController, NavParams, App, ViewController } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams, App, ViewController, FabContainer } from 'ionic-angular';
+import { ComunityListPage } from '../comunity-list/comunity-list';
+
 /**
 * Generated class for the DashboardPage page.
 *
@@ -12,22 +14,30 @@ import { IonicPage, NavController, NavParams, App, ViewController } from 'ionic-
   selector: 'page-dashboard',
   templateUrl: 'dashboard.html'
 })
+
 export class DashboardPage {
   @ViewChild ('subNav') subNav: NavController;
   public pagina: any = "";
   public profile: any = "";
   public openbtn: boolean = false;
-  public teste: any = 0;
-
-  
+  public fabhide : boolean = false;
   public hide: boolean = false;
-  
+
+
+  public tabDashDefault: any; //tab with dash with system language comunities
+  public tabDashGlobal: any; //tab with 'explore' with english comunities
+  public tabFave: any; //tab for followed comunities update (timeline) (sub tab with list)
+
+
+
+
   constructor(public navCtrl: NavController, 
     public navParams: NavParams, 
     public appCtrl: App,
     public viewCtrl: ViewController,
   ) {
-
+    this.tabDashDefault = DashboardPage;
+    this.tabDashGlobal = ComunityListPage;
   }
   
   ionViewDidLoad() {
@@ -71,13 +81,14 @@ export class DashboardPage {
     
   }
   open(paginaPar){
-    // this.pagina = paginaPar;
     this.subNav.push(paginaPar)
-    //this.appCtrl.getRootNav().setRoot(this.pagina);
   }
   
   back(){
-    this.subNav.pop()
+    this.subNav.pop();
   }
-  
+
+  close(event, fabbtn: FabContainer){
+      fabbtn.close();
+  }
 }

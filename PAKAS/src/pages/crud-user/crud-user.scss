@@ -19,18 +19,20 @@ page-crud-user {
 }
 
 .btn-inside{
+     background-color: transparent !important;
+     border: 1px solid var(--blueNeonColor);
     .button{
-        color: var(--blueNeonColor);
+        color: var(--pinkNeonColor);
         outline: 1px;
-        outline-color: var(--blueNeonColor);
+        outline-color: var(--pinkNeonColor);
         box-shadow: var(--blueNeonColor);
-        background-color: transparent !important;
+        
     }
     :hover{
-        background-color: var(--pinkNeonColor);
+        background-color: transparent !important;
         border-right-color: var(--pinkNeonColor);
         border-left-color: var(--pinkNeonColor);
-        padding: 0px;
+       
     }
 }
 
