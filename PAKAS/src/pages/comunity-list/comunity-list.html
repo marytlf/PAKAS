@@ -1,17 +1,18 @@
-<ion-header>
-	<ion-toolbar class="title-group">
-		<div class = "btn-nav">
-			<button class="button-back" ion-button (click) = "back()">
-				<i class="material-icons">keyboard_arrow_left</i>
+
+    <ion-toolbar>
+
+			<button clear ion-button (click)="back()" no-padding>
+			  <i class="material-icons">arrow_back_ios</i>
 			</button>
-		</div>
-	</ion-toolbar>
-</ion-header>
+  
+	  </ion-toolbar>
+  
+  
+  
 
-
-<ion-content class="bgn-t scroll-content">
+<ion-content class="bgn-t">
 	
-			<ion-card (click)="openTest('ProfilePage')">
+			<ion-card (click)="open('ProfilePage')">
 
 
 					<ion-card-content>
@@ -25,11 +26,6 @@
 							</p>
 						</div>
 					</ion-card-content>
-
-
 			</ion-card>
-			
-	
-	
 	
 </ion-content>

@@ -1,38 +1,49 @@
-
-
 <div>
-	<ion-fab mini bottom center #fabbtn>
-		
-		<button color="var(--darkPurpleColor)" ion-fab id="btn-active">
-				<i class="material-icons">add</i>
-		</button>
-
-		<ion-fab-list side="top" (click)="fabbtn.close()">
-				<button class="cth-heart" ion-button outline (click) = "open('ProfilePage')">
-						<i class="material-icons">face</i>
-				</button>
-				<button ion-button outline (click) = "open('ComunityPage')" >
-						<i class="material-icons">add</i>
-				</button>
-				<button ion-button outline (click) = "open('ComunityListPage')">
-						<i class="material-icons">star_border</i>
+	<ion-fab mini bottom center #fabbtn margin-bottom="5px">
+			
+			<button color="var(--darkPurpleColor)" ion-fab id="btn-active">
+					<i class="material-icons">add</i>
+			</button>
+			
+				<ion-fab-list side="left" (click)="fabbtn.close()" >
+						<button id="cth-heart" ion-button outline (click) = "open('ProfilePage')">
+								<i class="material-icons">face</i>
+						</button>
+						<button ion-button outline (click) = "open('ComunityPage')" >
+								<i class="material-icons">add</i>
+						</button>
+	
+				</ion-fab-list>
+	
+				<ion-fab-list side="right" (click)="fabbtn.close()" >
+						<button ion-button outline (click) = "open('ComunityListPage')">
+								<i class="material-icons">star_border</i>
+						</button>
+					
+						<button ion-button outline (click) = "open('Topics')">
+								<i class="material-icons">favorite_border</i>
+						</button>
+				</ion-fab-list>
+	
+		</ion-fab>
+	
+	
+	
+		<div class="tab-bottom">
+			<div class="tab-nav-left">
+				<button ion-button clear no-padding icon-only (click)="open('DashboardPage')">
+					<i class="material-icons mti-tab">home</i>	
+				</button>			
+			</div>
+			<div class="tab-nav-right">
+				<button ion-button clear no-padding icon-only>
+					<i class="material-icons mti-tab">search</i>
 				</button>
 			
-				<button ion-button outline (click) = "open('Topics')">
-						<i class="material-icons">favorite_border</i>
-				</button>
-		
-				<button ion-button outline (click) = "back()">
-						<i class="material-icons">more_horiz</i>
-				</button>
-		
-		</ion-fab-list>
-	</ion-fab>
-	<div class="teste">
-		<div class="mari-nav">Teste 1</div>
-		<div class="mari-nav">Teste 2</div>
-	</div>
+			</div>
+		</div>
 </div>
+
 
 
 <div *ngIf="hide">
@@ -71,10 +82,5 @@
 	</div>
 </div>
 
-<ion-footer>
-	<ion-tabs>
-		<ion-tab tabIcon="list" [root]="pagina" ></ion-tab>
-	</ion-tabs>
-</ion-footer>
 
 <ion-nav #subNav [root]="pagina"></ion-nav>

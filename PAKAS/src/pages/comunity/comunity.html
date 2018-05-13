@@ -1,46 +1,86 @@
 
-<ion-header>
-    <ion-toolbar class="title-group">
-        <div class = "btn-nav">
-            <button class="button-back" ion-button (click) = "back()">
-                <i class="material-icons">keyboard_arrow_left</i>
+    <ion-toolbar>
+
+            <button clear ion-button (click)="back()" no-padding>
+              <i class="material-icons">arrow_back_ios</i>
             </button>
-        </div>
-    </ion-toolbar>
-</ion-header>
+  
+      </ion-toolbar>
+  
+  
+  
 
 
+<ion-content padding class="bgn-t">
 
-
-<ion-content padding class="bgn-t scroll-content">
-    <ion-list> 
-        <ion-item>
+    <ion-item>
             <ion-list class="pakas-insert">
                 <img [src] = "logopakas">
-			</ion-list>
-        </ion-item>
-        <ion-item class="form-group-user">
-            <ion-label floating color = "colorPrimary">nome:</ion-label>
-            <ion-input type = "text"></ion-input>
-        </ion-item>
-        <ion-item class="form-group-user">
-            <ion-label floating color = "colorPrimary">descrição:</ion-label>
-            <ion-input type = "text" id="textAreaDesc"></ion-input>
-        </ion-item>
-        <ion-item class="form-group-user">
-            <ion-label floating color = "colorPrimary">categoria:</ion-label>
-            <ion-input type = "text"></ion-input>
-        </ion-item>
-        <ion-item class="form-group-user">
-            <ion-label floating color = "colorPrimary">tipo:</ion-label>
-            <ion-input type = "text"></ion-input>
-        </ion-item>
-        <ion-item>
-            <div class = "btn-inside">
-                <button ion-button round block small (click)= "getDescription()">
-                    Criar!
-                </button>   
-            </div> 
-        </ion-item>
-    </ion-list>
+            </ion-list>
+    </ion-item>
+    <ion-slides>
+        <ion-list>
+             <ion-slide>
+                <ion-item class="form-group-user">
+                    <ion-label floating color = "colorPrimary">nome:</ion-label>
+                    <ion-input type = "text"></ion-input>
+                </ion-item>
+                <ion-item class="form-group-user">
+                    <ion-label floating color = "colorPrimary">descrição:</ion-label>
+                    <ion-input type = "text" id="textAreaDesc"></ion-input>
+                </ion-item>
+                <ion-item class="form-group-user">
+                    <ion-label color = "var(--pinkNeonColor)">{{categoria}}</ion-label>
+                    <ion-select [(ngModel)]="selectResult" color = "var(--pinkNeonColor)">
+                        <ion-option *ngFor="let category of categories">
+                            {{category}}
+                        </ion-option>
+                    </ion-select>
+                </ion-item>
+                <ion-item class="btn-next-right">
+                        <ion-label>
+                            <i class="material-icons">navigate_next</i>
+                        </ion-label>
+                </ion-item>
+            </ion-slide>
+        </ion-list>
+        
+        <ion-list>
+            <ion-slide>
+                    <ion-item class="form-group-user">
+ 
+                        <ion-label color = "var(--pinkNeonColor)">tipo:</ion-label>
+                            <ion-select [(ngModel)]="selectType" color = "var(--pinkNeonColor)">
+                                <ion-option value="public">Publico</ion-option>
+                                <ion-option value="private">Privado</ion-option>
+                            </ion-select>
+                    </ion-item>
+                    <ion-item class="form-group-user">
+                        <ion-label color = "var(--pinkNeonColor)">idioma:</ion-label>
+                            <ion-select [(ngModel)]="selectLanguage" color = "var(--pinkNeonColor)">
+                                <ion-option value="public">Português(BR)</ion-option>
+                                <ion-option value="private">English (US)</ion-option>
+                                <ion-option value="others">Others</ion-option>
+                            </ion-select>
+                        </ion-item>
+                    <ion-item class="form-group-user">
+                                <ion-label floating color = "colorPrimary">tags <br> <p style="font-size: 10px">(Ex: meme, funny, college):</p></ion-label>
+                                <ion-input type = "text"></ion-input>
+                            </ion-item>
+                    <ion-item>
+                        <div class = "btn-inside">
+                            <button ion-button round block small>
+                                Criar!
+                            </button>   
+                        </div> 
+                    </ion-item>
+                    <ion-item class="btn-before-left">
+                            <ion-label>
+                                <i class="material-icons">navigate_before</i>
+                            </ion-label>
+                     </ion-item>
+                </ion-slide>
+        </ion-list>
+
+    </ion-slides>
 </ion-content>

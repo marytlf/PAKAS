@@ -24,20 +24,11 @@ export class DashboardPage {
   public hide: boolean = false;
 
 
-  public tabDashDefault: any; //tab with dash with system language comunities
-  public tabDashGlobal: any; //tab with 'explore' with english comunities
-  public tabFave: any; //tab for followed comunities update (timeline) (sub tab with list)
-
-
-
-
   constructor(public navCtrl: NavController, 
     public navParams: NavParams, 
     public appCtrl: App,
     public viewCtrl: ViewController,
   ) {
-    this.tabDashDefault = DashboardPage;
-    this.tabDashGlobal = ComunityListPage;
   }
   
   ionViewDidLoad() {
@@ -45,47 +36,25 @@ export class DashboardPage {
     console.log(this.subNav)
   }
 
+  openFab(){
+    document.getElementById("cthheart").style.transformOrigin = "10px";
+  }
+
+
   openNotf(){
     document.getElementById("mySidenav").style.height = "220px";
     this.hide = true;
   }
-  openNavSide() {
-    document.getElementById("ion-list-nav").style.height = "70%";
-    document.getElementById("ion-list-nav").style.paddingTop = "130px";
-    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-    this.hide = false;
-    this.openbtn = true;
 
-  }
-  
-  closeNavSide(){
-    document.getElementById("mySidenav").style.height = "0px";
-    document.getElementById("ion-list-nav").style.height = "0px";
-    this.hide = false;
-    document.body.style.backgroundColor = "transparent";
-    
-  }
-
-  openNav() {
-    document.getElementById("mySidenav").style.width = "260px";
-    document.getElementById("ion-list-nav").style.width = "260px";
-    this.hide = true;
-    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-  }
-  
-  closeNav() {
-    document.getElementById("mySidenav").style.width = "0px";
-    document.getElementById("ion-list-nav").style.width = "67px";
-    this.hide = false;
-    document.body.style.backgroundColor = "transparent";
-    
-  }
   open(paginaPar){
     this.subNav.push(paginaPar)
   }
   
   back(){
-    this.subNav.pop();
+    console.log(this.subNav.getActive());
+    if(this.subNav.canGoBack)
+        this.subNav.pop();
+    this.subNav.push(DashboardPage);
   }
 
   close(event, fabbtn: FabContainer){

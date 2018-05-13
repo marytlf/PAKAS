@@ -1,13 +1,19 @@
-<ion-toolbar>
 
+  <ion-toolbar>
+    <div class="back-btn">
         <button clear ion-button (click)="back()" no-padding>
-          <i class="material-icons">arrow_back_ios</i>
+            <i class="material-icons">arrow_back_ios</i>
+          </button>
+    </div>
+      
+    <div class="edit-btn">
+        <button clear ion-button (click)="edit()" no-padding witdh="80%">
+            <i class="material-icons">edit</i>
         </button>
-
+    </div>
+  
   </ion-toolbar>
 
-
-<ion-content padding class="scroll-content">
 
     <ion-card>
         <ion-item text-wrap>
@@ -15,16 +21,57 @@
             <img src="assets/imgs/profilepic.jpeg">
           </ion-avatar>
           <h2>Alpaca Junior</h2>
-          <p>@username</p>
+          
+            <ion-label floating [(ngModel)]="username">username:</ion-label>
+            <ion-input type = "text"></ion-input>
           
         </ion-item>
         <ion-item text-wrap>
           <p>Bio: Happy alpaca does happy alpaca things.</p>
           <p>Website: http://google.com</p>
         </ion-item>      
-      </ion-card>
-      <button ion-button outline round block small>
-        Salvar!
+    </ion-card>
+
+    <div class="tab-bottom">
+        <div class="tab-nav-left">
+          <button ion-button clear no-padding icon-only (click)="open('DashboardPage')">
+            <i class="material-icons mti-fab">conta</i>	
+          </button>			
+        </div>
+        <div class="tab-nav-right">
+          <button ion-button clear no-padding icon-only>
+            <i class="material-icons mti-fab">privacidade e notificações</i>
+          </button>
+        </div>
+    </div>
+
+          <ion-item class="form-group-user">
+              <ion-label floating>nome:</ion-label>
+              <ion-input type = "text"></ion-input>
+          </ion-item>
+          <ion-item class="form-group-user">
+              <ion-label floating>sobrenome:</ion-label>
+              <ion-input type = "text"></ion-input>
+          </ion-item>
+    
+          <ion-item class="form-group-user">
+              <ion-label floating>email:</ion-label>
+              <ion-input type = "text"></ion-input>
+          </ion-item>
+          <ion-item class="form-group-user">
+              <ion-label floating>senha:</ion-label>
+              <ion-input type = "text"></ion-input>
+          </ion-item>
+          <ion-item class="form-group-user">
+              <ion-label floating>confirmar senha:</ion-label>
+              <ion-input type = "text"></ion-input>
+          </ion-item>
+ 
+      
+      <button ion-button outline full class="btn-group save">
+          Salvar!
       </button>
-     
-</ion-content>
+      
+
+<ion-nav #subNav [root]="pagina"></ion-nav>
+

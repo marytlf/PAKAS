@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, App, ViewController, FabContainer } from 'ionic-angular';
+import { DashboardPage } from '../dashboard/dashboard';
 
 /**
  * Generated class for the ProfilePage page.
@@ -15,7 +16,10 @@ import { IonicPage, NavController, NavParams, App, ViewController, FabContainer 
 })
 export class ProfilePage {
   @ViewChild ('subNav') subNav: NavController;
+  
   public pagina: any = "";
+
+  public username: any = "mary";
 
   constructor(public navCtrl: NavController, 
     public navParams: NavParams,
@@ -29,11 +33,12 @@ export class ProfilePage {
 
 
   open(paginaPar){
+    this.appCtrl.getRootNav().push(paginaPar);
     this.subNav.push(paginaPar)
   }
   
   back(){
-    this.subNav.pop();
+    this.appCtrl.getRootNav().push(DashboardPage);
   }
 
   close(event, fabbtn: FabContainer){

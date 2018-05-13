@@ -15,11 +15,34 @@ import { IonicPage, NavController, NavParams, App} from 'ionic-angular';
 })
 export class ComunityPage {
 
+    public categoria = "categoria";
+    public selectResult = '';
+    public selectType = '';
+    public selectLanguage = '';
+
+
+    public categories = [
+        "Music",
+        "Food",
+        "Places",
+        "LGBT",
+        "Games",
+        "How-to",
+        "Funny",
+        "Adult",
+        "Pop & Culture",
+        "Comics & Cartoons",
+        "Politics & Society",
+        "Movies & TV Shows",
+        "Technology & Education"
+    ]
+
     public logopakas = 'assets/imgs/pakas.png';
     public pagina: any = "ComunityPage";
 
     constructor(public navCtrl: NavController, public navParams: NavParams,
         public appCtrl: App) {
+            
     }
 
     ionViewDidLoad() {
@@ -34,4 +57,7 @@ export class ComunityPage {
     back(){
         this.navCtrl.setRoot("DashboardPage");
     }
+
+
+
 }
