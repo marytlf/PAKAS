@@ -6,6 +6,10 @@ import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { ViewChild } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { HttpClient } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
+import { FirebaseProvider } from '../providers/firebase/firebase';
 
 @Component({
   templateUrl: 'app.html',
@@ -13,7 +17,7 @@ import { NavController } from 'ionic-angular';
 export class MyApp {
   public rootPage:any = "LoginPage";
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
+  constructor(public firebase: FirebaseProvider, platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     
 
     platform.ready().then(() => {
@@ -23,6 +27,15 @@ export class MyApp {
       splashScreen.hide();
     });
 
+    this.firebase.auth().onAuthStateChanged(
+      user => {
+        if(!user){
+            this.rootPage = "LoginPage";
+        }else{
+            this.rootPage = "DashboardPage";
+        }
+      }
+    );
   }
 
   

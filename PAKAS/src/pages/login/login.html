@@ -10,18 +10,18 @@
 	<ion-list> 
 		<ion-item class="form-group">
 			<ion-label floating>username</ion-label>
-			<ion-input type = "text"></ion-input>
+			<ion-input type = "text" [(ngModel)]="email"></ion-input>
 		</ion-item>
 		
 		<ion-item class="form-group">
 			<ion-label floating>password</ion-label>
-			<ion-input type = "password"></ion-input>
+			<ion-input type = "password" [(ngModel)]="password"></ion-input>
 		</ion-item>
 	</ion-list>
   
 	
 	<div class="btn-group">
-		<button ion-button full (click) = "open('DashboardPage')">Entrar</button>
+		<button ion-button full (click) = "testLogin()">Entrar</button>
 	</div>
 	<ion-list class="forget-label lbl-style">
 		<span style="padding-top:30px; padding-bottom:60px; position: relative">
