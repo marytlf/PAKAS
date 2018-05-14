@@ -19,6 +19,8 @@ export class ComunityListPage {
 
   public pushPage: any = '';
 
+  public avatar = 'assets/imgs/alp1.png'
+
   constructor(public navCtrl: NavController, 
     public navParams: NavParams,
     public appCtrl: App,

@@ -1,31 +1,33 @@
 
-    <ion-toolbar>
+<ion-toolbar>
 
-			<button clear ion-button (click)="back()" no-padding>
-			  <i class="material-icons">arrow_back_ios</i>
-			</button>
-  
-	  </ion-toolbar>
-  
-  
+		<button clear ion-button (click)="back()" no-padding>
+			<i class="material-icons">arrow_back_ios</i>
+		</button>
+
+</ion-toolbar>
   
 
-<ion-content class="bgn-t">
-	
-			<ion-card (click)="open('ProfilePage')">
 
-
-					<ion-card-content>
-						<ion-thumbnail item-start item-start >
-							<img src="assets/imgs/alp1.png" class="ion-avatar-mg">
-						</ion-thumbnail>
-						<div class="title-group label label-md"> 
-							<ion-card-title>I Love alPAKAS!</ion-card-title>
-							<p>
-								Melhor aplicativo.
-							</p>
-						</div>
-					</ion-card-content>
-			</ion-card>
-	
-</ion-content>
+<ion-card (click)="open('ProfilePage')">
+		
+	<ion-card-content>
+		<ion-avatar item-start>
+			<img [src]="avatar" class="ion-avatar-mg">
+			<div class="title-group label label-md"> 
+					<ion-card-title>I Love alPAKAS!</ion-card-title>
+					<p>
+						Melhor aplicativo.
+					</p>
+			</div>
+			<div>
+				<ion-fab #followfab mini bottom right>
+					<button  small icon-only class="fab-follow">
+						<i class="material-icons">star_border</i>
+					</button>
+				</ion-fab>
+			</div>
+		</ion-avatar>
+		
+	</ion-card-content>
+</ion-card>

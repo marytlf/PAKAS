@@ -33,12 +33,11 @@ export class ProfilePage {
 
 
   open(paginaPar){
-    this.appCtrl.getRootNav().push(paginaPar);
     this.subNav.push(paginaPar)
   }
   
   back(){
-    this.appCtrl.getRootNav().push(DashboardPage);
+    this.subNav.pop();
   }
 
   close(event, fabbtn: FabContainer){

@@ -22,6 +22,7 @@ export class DashboardPage {
   public openbtn: boolean = false;
   public fabhide : boolean = false;
   public hide: boolean = false;
+  public avatar = "assets/imgs/alp1.png";
 
 
   constructor(public navCtrl: NavController, 
