@@ -9,13 +9,12 @@
 
 <div class="timeline">
 
-
-	<ion-card (click)="open('ProfilePage')">
+	<ion-card *ngFor="let comunity of comunities">
 			<ion-card-content>
 				<ion-avatar item-start>
 					<img [src]="avatar" class="ion-avatar-mg">
 					<div class="title-group label label-md"> 
-							<ion-card-title>Cansada.</ion-card-title>
+							<ion-card-title>{{comunity.name}}</ion-card-title>
 							<p>
 								Cansada.
 							</p>
@@ -30,3 +29,4 @@
 			</ion-card-content>
 		</ion-card>
 </div>
+

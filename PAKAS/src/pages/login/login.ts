@@ -49,7 +49,9 @@ export class LoginPage {
   testLogin(){
     if((this.email == '') || (this.password == '')){
       let janela = this.toastCtrl.create({
-        message: "Informe o email e senha!"
+        message: "Informe o email e senha!",
+        duration: 3000,
+        position: 'bottom'
       });
       janela.present();
     }else{
@@ -62,16 +64,16 @@ export class LoginPage {
       await this.firebase.auth().signInWithEmailAndPassword(this.email, this.password);
       let janela = this.toastCtrl.create({
         message: "Login realizado com sucesso!",
-        duration: 3000,
-        position: 'middle'
+        duration: 2000,
+        position: 'bottom'
       });
       janela.present();
       open('DashboardPage');
     }catch(e){
       let janela = this.toastCtrl.create({
         message: "Usuário já cadastrado.",
-        duration: 3000,
-        position: 'middle'
+        duration: 2000,
+        position: 'bottom'
       });
       janela.present();
       throw new Error(e);

@@ -9,6 +9,7 @@ import { FirebaseProvider } from '../providers/firebase/firebase';
 import { UsuarioProvider } from '../providers/usuario/usuario';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     HttpModule,
     HttpClientModule,
     IonicModule.forRoot(MyApp,{

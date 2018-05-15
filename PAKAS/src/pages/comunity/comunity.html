@@ -23,11 +23,11 @@
              <ion-slide>
                 <ion-item class="form-group-user">
                     <ion-label floating color = "colorPrimary">nome:</ion-label>
-                    <ion-input type = "text"></ion-input>
+                    <ion-input type = "text"  [(ngModel)]="name"></ion-input>
                 </ion-item>
                 <ion-item class="form-group-user">
                     <ion-label floating color = "colorPrimary">descrição:</ion-label>
-                    <ion-input type = "text" id="textAreaDesc"></ion-input>
+                    <ion-input type = "text" [(ngModel)]="description"></ion-input>
                 </ion-item>
                 <ion-item class="form-group-user">
                     <ion-label color = "var(--pinkNeonColor)">{{categoria}}</ion-label>
@@ -58,18 +58,18 @@
                     <ion-item class="form-group-user">
                         <ion-label color = "var(--pinkNeonColor)">idioma:</ion-label>
                             <ion-select [(ngModel)]="selectLanguage" color = "var(--pinkNeonColor)">
-                                <ion-option value="public">Português(BR)</ion-option>
-                                <ion-option value="private">English (US)</ion-option>
+                                <ion-option value="pt-br">Português(BR)</ion-option>
+                                <ion-option value="eg-us">English (US)</ion-option>
                                 <ion-option value="others">Others</ion-option>
                             </ion-select>
                         </ion-item>
                     <ion-item class="form-group-user">
                                 <ion-label floating color = "colorPrimary">tags <br> <p style="font-size: 10px">(Ex: meme, funny, college):</p></ion-label>
-                                <ion-input type = "text"></ion-input>
+                                <ion-input type = "text" [(ngModel)]="tags"></ion-input>
                             </ion-item>
                     <ion-item>
                         <div class = "btn-inside">
-                            <button ion-button round block small>
+                            <button ion-button round block small (click)="addComunity()">
                                 Criar!
                             </button>   
                         </div> 

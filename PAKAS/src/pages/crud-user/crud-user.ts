@@ -18,14 +18,12 @@ export class CrudUserPage {
   @ViewChild ('subNav') subNav: NavController;
   public pagina: any = "";
 
-  public dash: any = "";
 
   constructor(public navCtrl: NavController, 
     public navParams: NavParams,
     public viewCtrl: ViewController,
     public toastCtrl: ToastController
   ) {
-    this.dash = LoginPage;
   }
 
   ionViewDidLoad() {
@@ -39,8 +37,8 @@ export class CrudUserPage {
   sucess(){
     let toastEmail = this.toastCtrl.create({
       message: "Parabés, você acaba de criar um PAKAS!",
-      duration: 3000,
-      position: 'middle'
+      duration: 2000,
+      position: 'bottom'
     });
     toastEmail.present();
     this.open("DashboardPage")
@@ -55,6 +53,7 @@ export class CrudUserPage {
       fabbtn.close();
   }
 
+  
 
 
 }

@@ -1,6 +1,9 @@
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams, App, ViewController, FabContainer } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, App, ViewController, FabContainer, AlertController, ToastController, ModalController } from 'ionic-angular';
 import { ComunityListPage } from '../comunity-list/comunity-list';
+import { UsuarioProvider } from '../../providers/usuario/usuario';
+import { FirebaseProvider } from '../../providers/firebase/firebase';
+import { LoginPage } from '../login/login';
 
 /**
 * Generated class for the DashboardPage page.
@@ -29,6 +32,11 @@ export class DashboardPage {
     public navParams: NavParams, 
     public appCtrl: App,
     public viewCtrl: ViewController,
+    public firebase: FirebaseProvider,
+    public usuario: UsuarioProvider,
+    public modalCtrl: ModalController,
+    public toastCtrl: ToastController,
+    public alert: AlertController
   ) {
   }
   
@@ -61,4 +69,14 @@ export class DashboardPage {
   close(event, fabbtn: FabContainer){
       fabbtn.close();
   }
+
+  async logout(){
+    try{
+      await this.firebase.auth().signOut();
+      this.appCtrl.getRootNav().setRoot(LoginPage);
+    }catch(e){
+      throw new Error(e);
+    }
+  }
+ 
 }
