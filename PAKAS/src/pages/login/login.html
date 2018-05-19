@@ -5,30 +5,31 @@
 </ion-list>
 
 
-  <ion-content padding class="bgn-t">
+  <ion-content>
 
-	<ion-list> 
+
+<div>
 		<ion-item class="form-group">
-			<ion-label floating>username</ion-label>
-			<ion-input type = "text" [(ngModel)]="email"></ion-input>
+				<ion-label floating>username</ion-label>
+				<ion-input type = "text" [(ngModel)]="email"></ion-input>
 		</ion-item>
-		
+			
 		<ion-item class="form-group">
-			<ion-label floating>password</ion-label>
-			<ion-input type = "password" [(ngModel)]="password"></ion-input>
+				<ion-label floating>password</ion-label>
+				<ion-input type = "password" [(ngModel)]="password"></ion-input>
 		</ion-item>
-	</ion-list>
+</div>
+	
+
+	
+
   
 	
 	<div class="btn-group">
 		<button ion-button full (click) = "testLogin()">Entrar</button>
 	</div>
 	<ion-list class="forget-label lbl-style">
-		<span style="padding-top:30px; padding-bottom:60px; position: relative">
-			<ion-label block (click) = "open('CrudUserPage')" >Desejo me registrar!
-			</ion-label>
-		</span>
-
+		<ion-label block (click) = "openNewUser()" >Desejo me registrar!</ion-label>
 		<ion-label block (click) = "forgotPassword()">Esqueci minha senha!</ion-label>
 	</ion-list>
   </ion-content>

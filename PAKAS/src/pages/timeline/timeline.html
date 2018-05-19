@@ -1,32 +1,33 @@
 <ion-toolbar>
 
-		<button clear ion-button (click)="back()" no-padding>
-			<i class="material-icons">arrow_back_ios</i>
-		</button>
+  <button clear ion-button (click)="back()" no-padding>
+    <i class="material-icons">arrow_back_ios</i>
+  </button>
 
 </ion-toolbar>
-  
 
-<div class="timeline">
 
-	<ion-card *ngFor="let comunity of comunities">
-			<ion-card-content>
-				<ion-avatar item-start>
-					<img [src]="avatar" class="ion-avatar-mg">
-					<div class="title-group label label-md"> 
-							<ion-card-title>{{comunity.name}}</ion-card-title>
-							<p>
-								Cansada.
-							</p>
-					</div>
-					<div>
-						<button  small icon-only class="fab-follow">
-							<i class="material-icons">star_border</i>
-						</button>
-					</div>
-				</ion-avatar>
-				
-			</ion-card-content>
-		</ion-card>
+<div class="timeline" >
+
+<ion-card *ngFor="let comunity of comunities">
+    <ion-card-content>
+      <div class="fab-follow">
+          <button clear small icon-only class="btn-star">
+            <i class="material-icons">star_border</i>
+          </button>
+      </div>
+      <ion-avatar item-start>
+        <img [src]="avatar" class="ion-avatar-mg">
+        <div class="title-group label label-md"> 
+            <ion-card-title>{{comunity.name}}</ion-card-title>
+            <p>
+              {{comunity.description}}
+            </p>
+        </div>			
+      </ion-avatar>
+      
+      
+    </ion-card-content>
+  </ion-card>
 </div>
 

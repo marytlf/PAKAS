@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, App, ViewController, FabContainer, AlertController, ToastController, ModalController } from 'ionic-angular';
-import { ComunityListPage } from '../comunity-list/comunity-list';
+
 import { UsuarioProvider } from '../../providers/usuario/usuario';
 import { FirebaseProvider } from '../../providers/firebase/firebase';
 import { LoginPage } from '../login/login';
@@ -19,7 +19,7 @@ import { LoginPage } from '../login/login';
 })
 
 export class DashboardPage {
-  @ViewChild ('subNav') subNav: NavController;
+  //@ViewChild ('subNav') subNav: NavController;
   public pagina: any = "";
   public profile: any = "";
   public openbtn: boolean = false;
@@ -42,7 +42,7 @@ export class DashboardPage {
   
   ionViewDidLoad() {
     console.log('ionViewDidLoad DashboardPage');
-    console.log(this.subNav)
+    //console.log(this.subNav)
   }
 
   openFab(){
@@ -56,14 +56,14 @@ export class DashboardPage {
   }
 
   open(paginaPar){
-    this.subNav.push(paginaPar)
+    this.navCtrl.push(paginaPar)
   }
   
   back(){
-    console.log(this.subNav.getActive());
-    if(this.subNav.canGoBack)
-        this.subNav.pop();
-    this.subNav.push(DashboardPage);
+    console.log(this.navCtrl.getActive());
+    if(this.navCtrl.canGoBack)
+        this.navCtrl.pop();
+    this.navCtrl.push(DashboardPage);
   }
 
   close(event, fabbtn: FabContainer){

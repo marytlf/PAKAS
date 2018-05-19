@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, App, ModalController, ToastController, AlertController } from 'ionic-angular';
 import { setupPreloadingImplementation } from 'ionic-angular/util/module-loader';
-import { EsqueciPassPage } from '../esqueci-pass/esqueci-pass';
 
 import { FirebaseProvider } from '../../providers/firebase/firebase'
 
@@ -9,7 +8,7 @@ import { FirebaseProvider } from '../../providers/firebase/firebase'
 
 @IonicPage()
 @Component({
-  selector: 'page-login',
+  selector: 'login',
   templateUrl: 'login.html',
 })
 export class LoginPage {
@@ -37,8 +36,17 @@ export class LoginPage {
     this.appCtrl.getRootNav().setRoot(this.pagina);
   }
 
+  openNewUser(){
+    let remember = this.modalCtrl.create('ProfileCrudPage',{name: '', lastName: '', username: '', email:'',password:''});
+
+    remember.onDidDismiss( retorno =>{
+      console.log("Modal");
+      })
+    remember.present();
+  }
+
   forgotPassword(){
-    let remember = this.modalCtrl.create("EsqueciPassPage",{email: ''});
+    let remember = this.modalCtrl.create("ForgetPassPage",{email: ''});
 
     remember.onDidDismiss( retorno =>{
       console.log("Modal");

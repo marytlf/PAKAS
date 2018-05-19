@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { FirebaseProvider } from '../firebase/firebase';
 
+
 /*
   Generated class for the UsuarioProvider provider.
 
@@ -29,7 +30,7 @@ export class UsuarioProvider {
       )
     console.log('Hello UsuarioProvider Provider');
   }
-
+  
   get(){
     return this.usuario;
   }

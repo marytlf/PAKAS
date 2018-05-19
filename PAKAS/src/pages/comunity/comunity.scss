@@ -1,4 +1,5 @@
 page-comunity {
+
     .bgn-t {
         background-color: transparent !important;
         position: relative;
@@ -13,9 +14,7 @@ page-comunity {
         opacity: 0.3;
         
     }
-    .item-input .label-md, .item-select .label-md, .item-datetime .label-md{
-        color: var(--pinkNeonColor);
-    }
+
 
     .slide-zoom {
         height: 90%;
@@ -40,3 +39,4 @@ page-comunity {
     -webkit-box-shadow: 0 16px 20px rgba(0, 0, 0, 0.4);
     box-shadow: 0 16px 20px rgba(0, 0, 0, 0.4);
 }
+

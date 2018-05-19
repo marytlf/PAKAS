@@ -1,0 +1,43 @@
+forget-pass {
+    .item{
+         margin-top: 30px;
+    }
+    
+    
+    .text-input {
+        margin-top: 20px;
+        font-size: 15px;
+    }
+    .forget{
+        position: absolute;
+        display: flex;
+        bottom: 40%;
+      }
+    .btn-send{
+        position: absolute;
+        display: block;
+        bottom: 20%;
+    }
+    
+    .btn-forgot{
+    
+        .button-back{
+            top: 0px;
+            left: 0px;
+            font-size: 15px;
+        }
+        .button-ok{
+            size: 10px;
+            right: 0px;
+            font-size: 25px;
+        }
+        
+    }
+    
+    .btn-inside{
+            outline: 1px;
+            border-radius: 30px;
+            font-size: 2px;
+    }
+    
+}

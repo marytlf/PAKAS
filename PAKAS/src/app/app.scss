@@ -1,58 +1,16 @@
-// http://ionicframework.com/docs/theming/
-
-
-// App Global Sass
-// --------------------------------------------------
-// Put style rules here that you want to apply globally. These
-// styles are for the entire app and not just one component.
-// Additionally, this file can be also used as an entry point
-// to import other Sass files to be included in the output CSS.
-//
-// Shared Sass variables, which can be used to adjust Ionic's
-// default Sass variables, belong in "theme/variables.scss".
-//
-// To declare rules for a specific mode, create a child rule
-// for the .md, .ios, or .wp mode classes. The mode class is
-// automatically applied to the <body> element in the app.
-:root{
-  --primary:    #FD5B78;
-  --secondary: #00E3BE;
-  --danger:     #7070CC;
-  --light:       #f4f4f4;
-  --dark:       #222;
-  --navBar:    #542e50;
-  --navBarLight: #dabdd6;
-  --navBarDark: #2a0628;
-  --magPurple: #6D214F;
-  --lightPurpleColor: #6457a5;
-  --darkPurpleColor: #352a69;
-  --pinkNeonColor: #FD5B78;
-  --blueNeonColor: #00E3BE;
-  --textWhiteColor: white;
-}
-
 
 
 .input-group{
-    color: var(--pinkNeonColor);
-    font-family: "Nunito";
     font-size: 15px;
     text-align: center;
+    color: color($colors,textColor);
     background-color: transparent !important;
     input{
         height: 80%;
         width: 30px;
         background-color: transparent !important;
-        color: var(--pinkNeonColor);
-        text-decoration-color: var(--pinkNeonColor);
-    }
-    :focus{
-        text-decoration-color: var(--pinkNeonColor);
-    }
-}
 
-.input-group:hover{
-    color: var(--pinkNeonColor);
+    }
 }
 
 .logo-pakas-fab{
@@ -71,18 +29,10 @@
 
 
 .btn-nav{
-    background-color: var(--blueNeonColor);
+
     display: flex;
 
-    button{
-        color: var(--textWhiteColor);
-        background-color: var(--blueNeonColor);
-        box-shadow: var(--pinkNeonColor);
-        padding: 15px;  
-    }
-    .button-md:hover{
-        background-color: var(--pinkNeonColor);
-    }
+
 
     .button-back{
         top: 0px;
@@ -104,8 +54,6 @@
 
 .title-group{
     text-align: left;
-    color: var(--darkPurpleColor);
-    font-family: 'Nunito';
     font-size: 4em;
     height: 40px;
     padding-bottom: 0px;
@@ -113,21 +61,15 @@
 }
 
 .btn-menu{
-    color: var(--textWhiteColor);
-    background-color: transparent!important;
-    outline-color: transparent!important;
-    border-color: transparent!important;
+
     text-align: right;
+    border: 3px solid transparent;
     border-radius: 3px;
     padding-left: 0px;
     padding-right: 0px;
-    margin: 0px 0px 0px 0px;
+    margin: 2px solid transparent;
     width: -webkit-fill-available;
-    :hover{
-        border-color: var(--blueNeonColor);
-        background-color: var(--pinkNeonColor);
-        color: var(--textWhiteColor);
-    }
+
     .item-md .item-button{
         border-bottom: 0px;
         padding-top: 15px;
@@ -135,13 +77,7 @@
         padding-left: 0px;
         padding-right: 0px;
         font-size: 13px;
-        font-family: 'Nunito';
-        :hover{
-            background-color: transparent!important;
-            border-left-color:  var(--pinkNeonColor);
-            border-right-color: var(--pinkNeonColor);
 
-        }
     }
     .button-inner{
         justify-content: flex-end;
@@ -149,19 +85,9 @@
     
 }
 
-.label .label-md{
-    padding: 0px 0px 0px 0px;
-    margin: 0px 0px 0px 0px;
-    :focus{
-        color: var(--pinkNeonColor);
-    }
-    .label-md[floating]:focus{
-        color: var(--pinkNeonColor);
-    }
-}
-.label-md[floating]{
-    color: var(--pinkNeonColor);
-}
+
+
+
 
 .material-icons{
     text-align: center;
@@ -188,48 +114,51 @@ ion-icon {
 .btn-group {
     display: flex;
     position: relative;
-    bottom: -240px;
+    bottom: -250px;
+    border: 4px solid transparent;
+    padding-bottom: 10px;
+    padding-top: 10px;
 
     .button-md{
         box-shadow: none;
         border-radius: 60px;
-        background-color: var(--darkPurpleColor);
-        padding: 0px 0px 0px 0px;
-        color: var(--textWhiteColor);
         border-width: 1px;
         border-style: solid;
         border-radius: 60px;
-        border-color: var(--blueNeonColor);
-        /* color: #488aff; */
+
         background-color: transparent;
         -webkit-box-shadow: none;
         box-shadow: none;
     }
-    :hover{
-        color: var(--darkPurpleColor);
-        background-color: var(--pinkNeonColor)
-    }
 
-    button:active{
-        box-shadow: var(--blueNeonColor);
-        animation-duration: 2ms;
-        outline:none;
-        background-color: var(--blueNeonColor);
-    }
 
     .button-outline-md{
         border-width: 1px;
         border-style: solid;
         border-radius: 60px;
-        border-color: var(--blueNeonColor);
-        /* color: #488aff; */
+
         background-color: transparent;
         -webkit-box-shadow: none;
         box-shadow: none;
-        :hover{
-            border-color: var(--pinkNeonColor) ;
-        }
+
     }
+
+}
+.btn-group-user .button-outline-md{
+    display: flex;
+    border: 1px solid color($colors, secondary);
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-radius: 60px;
+    top: 100px;
+    /* bottom: 20px; */
+    position: relative;
+    height: 40px;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: white;
+    
 
 }
 
@@ -238,7 +167,6 @@ ion-icon {
 .lbl-style{
     font-weight: 500;
     text-transform: uppercase;
-    color: var(--textWhiteColor);
     height: 40%;
     margin: 0px 0px 0px 0px;
 }
@@ -260,48 +188,52 @@ ion-icon {
 }
 
 
-    .list-md .item-block .item-inner{
-        border-bottom: 1px solid var(--pinkNeonColor) ;
-        border-bottom-color: var(--pinkNeonColor) ;
+    .item-inner{
+        border-bottom: none!important;
         webkit-box-shadow: none!important;
         box-shadow: none!important;
-        :focus{
-            border-bottom-color: var(--pinkNeonColor) ;
-        }
-
    }
-
-   .item-inner{
-        border-bottom: 1px solid var(--pinkNeonColor);
-        border-radius: 0px;
-        box-shadow: none !important;
-        webkit-box-shadow: none !important;
-        border-bottom-width: 40%;
-        
-        :focus{
-            box-shadow: none;
-        webkit-box-shadow: none!important;
-        box-shadow: none!important;
-        }
-
-   }
-
    .list-md .item-input:last-child{
-        border-bottom: 1px var(--pinkNeonColor);
-        border-radius: 0px!important;
+        border-radius: 0px;
+        border-bottom: none!important;
+        position: relative;
         box-shadow: none!important;
-        webkit-box-shadow: none!important;
-        margin-left: 15px;
-        margin-right: 15px;
-        padding-right: 10px;
-        left: -15px;
-        :focus{
-            border-bottom-color: var(--pinkNeonColor) ;
-        }
    }
+
+
+
+   .item-label-stacked .input-wrapper, .item-label-floating .input-wrapper{
+    border-bottom: 1px solid white;
+   }
+
+
 
    .list-md .item-input.item-input-has-focus:last-child, .list-md .item-input.input-has-focus:last-child {
-        border-bottom-color: var(--pinkNeonColor);
         webkit-box-shadow: none;
         box-shadow: none;
     }
+
+
+.form-group {
+    border-radius: 30px;
+    text-align:center;
+    bottom: -250px;
+    position: relative;
+   
+   input{
+       height: 80%;
+       width: 30px;       
+   }   
+}
+
+.form-group-user {
+    border-radius: 30px;
+    text-align:center;
+    top: 40px;
+    position: relative;
+   
+   input{
+       height: 80%;
+       width: 30px;       
+   }   
+}

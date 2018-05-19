@@ -47,8 +47,7 @@ page-dashboard {
     .button-outline-md{
         border-width: 1px;
         border-style: solid;
-        border-color: #FD5B78;
-        color: #FD5B78;
+
         background-color: transparent;
         -webkit-box-shadow: none;
         box-shadow: none;
@@ -67,7 +66,6 @@ page-dashboard {
         z-index: 1; /* Stay on top */
         top: 0; /* Stay at the top */
         left: 0px;
-        background-color:var(--darkPurpleColor);
         overflow-x: hidden; /* Disable  scroll */
         overflow-y: hidden;
         border-bottom: 0px;
@@ -76,15 +74,6 @@ page-dashboard {
             padding-left: 0px;
         }
 
-    }
-
-    .fab-md{
-        background-color: var(--darkPurpleColor);
-    }
-
-    .mti-tab{
-        font-size: 30px;
-        color: var(--blueNeonColor);
     }
 
 
@@ -99,19 +88,8 @@ page-dashboard {
         
     }
     
-    .label-md{
-        padding: 0px 0px 0px 0px;
-        margin: 0px 0px 0px 0px;
-        :focus{
-            color: var(--pinkNeonColor);
-        }
-        .label-md[floating]:focus{
-            color: var(--pinkNeonColor);
-        }
-    }
     
     .badge-group{
-        color: var(--darkPurpleColor);
         
         ion-avatar img  {
             max-width: 100px !important;  //any size
@@ -131,15 +109,11 @@ page-dashboard {
                 margin-bottom: 0px;
                 margin-left: 10px;
             }
-            .badge-on-image:hover{
-                background-color: var(--pinkNeonColor);
-            }  
-            
+
         }
         
         .badge-on-image {
             position: absolute;
-            background-color: var(--blueNeonColor);
             bottom: 2px;
             left: -3px;
             padding: 0px 6px;
@@ -149,52 +123,6 @@ page-dashboard {
         
     }
     
-    
-    .sidenav{
-        width: 0px; /* 0 width - change this with JavaScript */
-        position: fixed; /* Stay in place */
-        z-index: 1; /* Stay on top */
-        top: 0; /* Stay at the top */
-        left: 0px;
-        background-color:var(--darkPurpleColor);
-        overflow-x: hidden; /* Disable  scroll */
-        overflow-y: hidden;
-        padding-top: 60px; /* Place content 60px from the top */
-        transition: 0.5s;
-        
-    }
-    
-    
-    .sidenav a {
-        padding: 0x 0px 0px 0px;
-        text-decoration: none;
-        font-size: 15px;
-        color: var(--pinkNeonColor);
-        display: block;
-        opacity: 0.7;
-        position: fixed;
-        
-        transition: 0.5s;
-    }
-    
-    .sidenav a:hover {
-        color: var(--pinkNeonColor);
-    }
-    
-    .sidenav .closebtn {
-        position: absolute;
-        top: 0;
-        right: 15px;
-        font-size: 36px;
-        margin-left: 60px;
-    }
-    
-    
-    @media screen and (max-height: 220px) {
-        .sidenav {padding-top: 15px;}
-        .sidenav a {font-size: 18px;}
-    
-}
 
 }
   

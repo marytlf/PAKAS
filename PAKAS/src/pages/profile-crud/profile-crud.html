@@ -1,0 +1,41 @@
+
+  <ion-toolbar>
+    <div class="back-btn">
+        <button clear ion-button (click)="back()" no-padding>
+            <i class="material-icons">arrow_back_ios</i>
+          </button>
+    </div>
+  
+</ion-toolbar>
+
+<ion-content padding>
+    <ion-item class="form-group-user">
+        <ion-label floating>nome:</ion-label>
+        <ion-input type = "text"[(ngModel)]="name"></ion-input>
+    </ion-item>
+    <ion-item class="form-group-user">
+        <ion-label floating>sobrenome:</ion-label>
+        <ion-input type = "text"[(ngModel)]="lastName"></ion-input>
+    </ion-item>
+
+    <ion-item class="form-group-user">
+        <ion-label floating>email:</ion-label>
+        <ion-input type = "text"[(ngModel)]="email"></ion-input>
+    </ion-item>
+    <ion-item class="form-group-user">
+        <ion-label floating>senha:</ion-label>
+        <ion-input type = "password"[(ngModel)]="password"></ion-input>
+    </ion-item>
+    <ion-item class="form-group-user">
+        <ion-label floating>confirmar senha:</ion-label>
+        <ion-input type = "password"[(ngModel)]="passRec"></ion-input>
+    </ion-item>
+
+
+    <div class="btn-group-user">
+      <button ion-button outline full (click) = "addUser()">Salvar!</button>
+   </div>
+
+</ion-content>
+         
+

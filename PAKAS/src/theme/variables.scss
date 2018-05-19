@@ -10,7 +10,7 @@ $font-path: "../assets/fonts";
 // rtl styles in your app. For more info, please see:
 // http://ionicframework.com/docs/theming/rtl-support/
 $app-direction: ltr;
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Arimo|Bree+Serif|Cinzel|Nunito|Passion+One|Quicksand');
+
 
 @import "ionic.globals";
 
@@ -23,6 +23,8 @@ $app-direction: ltr;
 // http://ionicframework.com/docs/theming/overriding-ionic-variables/
 
 
+
+
 // Named Color Variables
 // --------------------------------------------------
 // Named colors makes it easy to reuse colors on various components.
@@ -32,21 +34,16 @@ $app-direction: ltr;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #FD5B78,
-  secondary:  #00E3BE,
-  danger:    #7070CC ,
-  light:      #f4f4f4,
-  dark:       #222,
-  navBar:    #542e50,
-  navBarLight: #dabdd6,
-  navBarDark: #2a0628,
-  magPurple: #6D214F,
-  lightPurpleColor: #6457a5,
-  darkPurpleColor: #352a69,
-  pinkNeonColor: #00E3BE,
-  blueNeonColor:  #FD5B78,
-  textWhiteColor: #ffffff,
+  primary:    #6b5b95,
+  secondary:  #55f77f,
+  secondaryLight: #90ffb0,
+  danger:     #00c350,
+  light:      #9a88c6,
+  dark:       #3e3167,
+  textColor: #ffffff,
 );
+
+
 
 
 // App iOS Variables
@@ -55,11 +52,14 @@ $colors: (
 
 
 
+
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here
 
-$mdIconProvider: defaultIconSet('my/app/mdi.svg');
+
+
+
 // App Windows Variables
 // --------------------------------------------------
 // Windows only Sass variables can go here
@@ -90,5 +90,3 @@ $mdIconProvider: defaultIconSet('my/app/mdi.svg');
 
 @import "roboto";
 @import "noto-sans";
-
-

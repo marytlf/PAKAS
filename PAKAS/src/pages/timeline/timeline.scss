@@ -31,7 +31,6 @@ page-timeline {
         top: 10px;
         position:  relative;
         display:  flow-root;
-       
         transform: translateY(20px);
 
     }
@@ -42,8 +41,18 @@ page-timeline {
         border-radius: 2px;
         font-size: 1.4rem;
         background: #fff;
-        -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+        box-shadow: transparent!important;
+        -webkit-box-shadow: unset;
+    
+    }
+    .card-title-md {
+        display: block;
+        font-size: initial;
+        line-height: 1.2;
+        margin: 2px 0;
+        padding-left: 3px;
+        padding-top: 0px;
+        font-weight: bold;
     }
 
     //description
@@ -55,16 +64,6 @@ page-timeline {
         color: #222;
         padding-left: 10px;
     }
-    //title inside avatar
-    page-timeline .card-title-md {
-        display: block;
-        font-size: 1.2rem;
-        line-height: 1.2;
-        color: var(--darkPurpleColor);
-        margin: 0px;
-        padding: 0px;
-        padding-left: 10px;
-    }
     //box inside avatar
     .card-content-md{
         font-size: 1.4rem;
@@ -73,9 +72,12 @@ page-timeline {
     }
 
     .fab-follow{
-        color: var(--blueNeonColor);
         background-color: transparent!important;
         box-shadow: transparent!important;
+        display: flex;
+        border: 0px transparent!important;
+        justify-content: right;
+
     }
 
     
@@ -85,16 +87,32 @@ page-timeline {
         transform: translateX(265px);
         top: 0;
         border-bottom: 0px;
-        color: var(--blueNeonColor);
-    }
+             }
 
     .mti-group{
         position: relative;
         display: -webkit-inline-flex;
-        color: var(--pinkNeonColor);
         background-color: transparent!important;
         font-family: 'Material Icons';
         font-size: 24px;
         transform: translateX(600%);
+    }
+
+    .btn-star {
+        
+        text-align: right;
+        font-family: inherit;
+        font-style: inherit;
+        font-variant: inherit;
+        line-height: 1;
+        text-transform: none;
+        cursor: pointer;
+        -webkit-appearance: button;
+        background-color: transparent;
+        position:fixed;
+        border-bottom: 2px solid transparent!important;
+        padding: 0px;
+        width: 97%;
+        
     }
 }
