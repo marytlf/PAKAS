@@ -1,6 +1,7 @@
 profile-crud {
  
     background: color($colors,primary);
+   
     .toolbar-content-md{
         position: initial;
         display: -webkit-inline-box;
@@ -23,32 +24,32 @@ profile-crud {
         right: 0; 
     }
 
-        .card-md {
-            padding-top: 50px;
-            margin: 10px;
-            border-radius: 2px;
-            width: calc(100% - 20px);
-            font-size: 1.4rem;
-            background: #fff;
-        }
+    .card-md {
+        padding-top: 50px;
+        margin: 10px;
+        border-radius: 2px;
+        width: calc(100% - 20px);
+        font-size: 1.4rem;
+        background: #fff;
+    }
 
-        .button-full.button-outline{
-            margin: 2px solid;
-            border-radius: 60px;
-            border-left: 2px solid;
-            border-right: 2px solid;
-        }
+    .button-full.button-outline{
+        margin: 1px solid color($colors,secondary);
+        border-radius: 60px;
+        border-left: 1px solid;
+        border-right: 1px solid;
+    }
 
-        .save{
-            position: initial;
-            border-radius: 60px;
-            z-index: 130;
-        }
+    .save{
+        position: initial;
+        border-radius: 60px;
+        z-index: 130;
+    }
 
-        .item {
-            contain: content;
-            z-index: 50;
-        }
+    .item {
+        contain: content;
+        z-index: 50;
+    }
 }
 
 

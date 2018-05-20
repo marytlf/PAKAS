@@ -73,7 +73,7 @@ export class DashboardPage {
   async logout(){
     try{
       await this.firebase.auth().signOut();
-      this.appCtrl.getRootNav().setRoot(LoginPage);
+      this.appCtrl.getRootNav().setRoot('LoginPage');
     }catch(e){
       throw new Error(e);
     }

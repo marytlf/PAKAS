@@ -1,7 +1,5 @@
 page-login{
 
-  
-
     ion-avatar img  {
         width:100% !important;
         height : 100% !important;
@@ -58,30 +56,33 @@ page-login{
     border: none;
     max-width:50%;
     max-height:50%;
-    top: 100px;
+    top: 60px;
     left: 25%;
     z-index: 9999;
-    position: relative;
+    position: fixed;
 }
 
+.fixed-content{
+    position: fixed;
+}
 
 .forget-label .label-md{
     color: color($colors, textColor);
-    text-align: right;
-    top: 260px;
-    height: 15%;
-    width: 95%;
-    position: relative ;
-
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-    padding: 0px;
+    top: 10%;
     font-weight: bold;
-   
+    :focus{
+        color: color($colors, textColor);
+    }
 }
 
+.row{
+    flex-wrap: inherit;
+    top: 10px;
+}
+.grid{
+    top: 180%;
+    position: relative;
+}
 
 .input-cover{
     border-bottom: 2px solid;

@@ -1,0 +1,31 @@
+  openNavSide() {
+    document.getElementById("ion-list-nav").style.height = "70%";
+    document.getElementById("ion-list-nav").style.paddingTop = "130px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    this.hide = false;
+    this.openbtn = true;
+
+  }
+  
+  closeNavSide(){
+    document.getElementById("mySidenav").style.height = "0px";
+    document.getElementById("ion-list-nav").style.height = "0px";
+    this.hide = false;
+    document.body.style.backgroundColor = "transparent";
+    
+  }
+
+  openNav() {
+    document.getElementById("mySidenav").style.width = "260px";
+    document.getElementById("ion-list-nav").style.width = "260px";
+    this.hide = true;
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+  }
+  
+  closeNav() {
+    document.getElementById("mySidenav").style.width = "0px";
+    document.getElementById("ion-list-nav").style.width = "67px";
+    this.hide = false;
+    document.body.style.backgroundColor = "transparent";
+    
+  }

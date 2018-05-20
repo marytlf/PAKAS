@@ -1,0 +1,70 @@
+    <div class="tab-bottom">
+        <div class="tab-nav-left">
+          <button ion-button clear no-padding icon-only (click)="open('DashboardPage')">
+            <i class="material-icons mti-fab">conta</i>	
+          </button>			
+        </div>
+        <div class="tab-nav-right">
+          <button ion-button clear no-padding icon-only>
+            <i class="material-icons mti-fab">privacidade e notificações</i>
+          </button>
+        </div>
+    </div>
+
+
+
+ if(this.email == ''){
+		let janela = this.toastCtrl.create({
+			message: "Informe o email!",
+			duration: 3000,
+			position: 'bottom'
+		});
+		janela.present();
+
+    }else{
+      let remember = this.modalCtrl.create("ForgetPassPage",{email: ''});
+     	remember.onDidDismiss( retorno =>{
+			 this.open("LoginPage");
+    	});
+      remember.present();
+    }
+
+
+
+
+    <ion-card>
+        <ion-item text-wrap>
+            <ion-avatar item-start large>
+                <img src="assets/imgs/profilepic.jpeg">
+            </ion-avatar>
+            <h2>Alpaca Junior</h2>
+                <ion-label floating >username:</ion-label>
+                <ion-input type = "text" [(ngModel)]="username"></ion-input>
+        </ion-item>
+        
+        <ion-item text-wrap>
+          <p>Bio: Happy alpaca does happy alpaca things.</p>
+          <p>Website: http://google.com</p>
+        </ion-item>      
+    </ion-card>
+
+    <div class="tab-bottom">
+        <div class="tab-nav-left">
+          <button ion-button clear no-padding icon-only (click)="open('DashboardPage')">
+            <i class="material-icons mti-fab">conta</i>	
+          </button>			
+        </div>
+        <div class="tab-nav-right">
+          <button ion-button clear no-padding icon-only>
+            <i class="material-icons mti-fab">privacidade e notificações</i>
+          </button>
+        </div>
+    </div>
+
+
+
+<div class="edit-btn">
+        <button clear ion-button (click)="edit()" no-padding witdh="80%">
+            <i class="material-icons">edit</i>
+        </button>
+    </div>

@@ -1,5 +1,4 @@
 
-
 .input-group{
     font-size: 15px;
     text-align: center;
@@ -11,6 +10,16 @@
         background-color: transparent !important;
 
     }
+}
+.item-input-has-focus .label-md[stacked],
+.input-has-focus .label-md[stacked],
+.item-input-has-focus .label-md[floating],
+.input-has-focus .label-md[floating] {
+  color: color($colors, textColor);
+}
+
+.label-md .label-md[stacked], .label-md[floating]{
+    color: color($colors, textColor);
 }
 
 .logo-pakas-fab{
@@ -29,10 +38,7 @@
 
 
 .btn-nav{
-
     display: flex;
-
-
 
     .button-back{
         top: 0px;
@@ -85,10 +91,6 @@
     
 }
 
-
-
-
-
 .material-icons{
     text-align: center;
     padding-left: 5px;
@@ -111,63 +113,66 @@ ion-icon {
   font-weight: bolder;
 }
 
+.item-md .item-button {
+    padding: 0 0.6em;
+    height: 35px;
+    font-size: 1.2rem;
+}
+
 .btn-group {
-    display: flex;
-    position: relative;
-    bottom: -250px;
-    border: 4px solid transparent;
+   
+    top: 55%;
+    //border: 4px solid transparent;
     padding-bottom: 10px;
     padding-top: 10px;
 
     .button-md{
         box-shadow: none;
-        border-radius: 60px;
         border-width: 1px;
         border-style: solid;
         border-radius: 60px;
-
+        color: color($colors, secondary);
         background-color: transparent;
         -webkit-box-shadow: none;
-        box-shadow: none;
-    }
-
-
-    .button-outline-md{
-        border-width: 1px;
-        border-style: solid;
-        border-radius: 60px;
-
-        background-color: transparent;
-        -webkit-box-shadow: none;
-        box-shadow: none;
-
     }
 
 }
-.btn-group-user .button-outline-md{
-    display: flex;
-    border: 1px solid color($colors, secondary);
-    padding-bottom: 10px;
-    padding-top: 10px;
+.button-outline-md{
+    border-width: 1px;
+    border-style: solid;
     border-radius: 60px;
-    top: 100px;
-    /* bottom: 20px; */
-    position: relative;
-    height: 40px;
+    color: color($colors, secondary);
     background-color: transparent;
     -webkit-box-shadow: none;
     box-shadow: none;
-    color: white;
+
+}
+
+.btn-group-user .button-outline-md{
     
+    border: 1px solid color($colors, secondary);
+    outline-color: 1px solid color($colors, secondary);
+    //display: inline-flex;
+    //position: relative;
+    top: 55%;
+    //border: 4px solid transparent;
+    padding-bottom: 10px;
+    padding-top: 10px;
+
+    box-shadow: none;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 60px;
+    color: color($colors, secondary);
 
 }
 
 
 
 .lbl-style{
-    font-weight: 500;
+    font-weight: 400;
     text-transform: uppercase;
-    height: 40%;
+    height: 30%;
     margin: 0px 0px 0px 0px;
 }
 
