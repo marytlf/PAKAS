@@ -14,7 +14,7 @@ import { IonicPage, NavController, NavParams, App, ViewController, FabContainer 
   templateUrl: 'list-comunity.html',
 })
 export class ListComunityPage {
-  @ViewChild ('subNav') subNav: NavController;
+  //@ViewChild ('subNav') subNav: NavController;
   public pagina: any = '';
 
   public pushPage: any = '';
@@ -31,14 +31,12 @@ export class ListComunityPage {
     console.log('ionViewDidLoad ListComunityPage');
   }
 
-
-
   open(paginaPar){
-    this.subNav.push(paginaPar)
+    this.navCtrl.push(paginaPar)
   }
   
   back(){
-    this.subNav.pop();
+    this.navCtrl.pop();
   }
 
   close(event, fabbtn: FabContainer){

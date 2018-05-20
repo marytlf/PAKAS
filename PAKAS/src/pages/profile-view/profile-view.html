@@ -1,18 +1,53 @@
-<!--
-  Generated template for the ProfileViewPage page.
+<ion-toolbar>
+    <span style="position: relative; display: flex;">
+        <div class="back-btn">
+            <button clear ion-button (click)="back()">
+                <i class="material-icons">arrow_back_ios</i>
+            </button>
+        </div>
+        <div class="edit-btn" style="display:  flex; position:  absolute; right: 0;">
+            <button clear ion-button (click)="save()">
+                <i class="material-icons">done</i>
+            </button>
+        </div>
+    </span>
+</ion-toolbar>
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
+<ion-content style="display: flex; position: absolute; top: 12%;">
 
-  <ion-navbar>
-    <ion-title>ProfileViewPage</ion-title>
-  </ion-navbar>
+        <ion-card>
 
-</ion-header>
+            <ion-grid>
+                <ion-row>
+                    <ion-col>
+                            
+                        <ion-avatar item-start large>
+                            <img  style="border-radius: 60px" src="assets/imgs/profilepic.jpeg">
+                        </ion-avatar>
+                           
+                    </ion-col>
+                    <ion-col>
+                        <ion-input style="font-size: 2rem" type = "text" [(ngModel)]="userData.name">{{userData.name}}</ion-input>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                            <ion-label floating>username:</ion-label>
+                            
+                            <ion-input type = "text" [(ngModel)]="userData.username">@{{userData.username}}</ion-input>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
 
+            
+                <ion-item text-wrap>
+                  <p>Bio: Happy alpaca does happy alpaca things.</p>
+                  <p>Website: http://google.com</p>
+                </ion-item>      
+            </ion-card>
+        
 
-<ion-content padding>
 
 </ion-content>
+
+

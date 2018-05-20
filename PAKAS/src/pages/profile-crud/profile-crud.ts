@@ -2,7 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, App, ViewController, FabContainer, ModalController, ToastController, AlertController } from 'ionic-angular';
 import { FirebaseProvider } from '../../providers/firebase/firebase';
 import { UsuarioProvider } from '../../providers/usuario/usuario';
-import { Content } from 'ionic-angular';        
+import { Content } from 'ionic-angular';  
 
 /**
  * Generated class for the ProfileCrudPage page.
@@ -22,7 +22,7 @@ export class ProfileCrudPage {
   public pagina: any = "";
 
   public user = {
-    username:'      ',
+    username:'',
     name:'',
     lastName:'',
     email: '',
@@ -66,6 +66,7 @@ export class ProfileCrudPage {
       fabbtn.close();
   }
 
+  //add no firebase
     async addUserServer(){
         try{
           await this.firebase.auth().createUserWithEmailAndPassword(this.user.email, this.user.password);
@@ -93,7 +94,7 @@ export class ProfileCrudPage {
         }
     }
 
-
+//valida campos
   addUser(){
     if(this.user.password != this.passRec){
         console.log(this.user.password+'-'+this.passRec);

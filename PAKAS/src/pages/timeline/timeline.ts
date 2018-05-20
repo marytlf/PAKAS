@@ -17,7 +17,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: 'timeline.html',
 })
 export class TimelinePage {
-  @ViewChild ('subNav') subNav: NavController;
+  //@ViewChild ('subNav') subNav: NavController;
   public pagina: any = '';
   public avatar = 'assets/imgs/alp3.png'
 
@@ -44,11 +44,11 @@ export class TimelinePage {
   }
 
   open(paginaPar){
-    this.subNav.push(paginaPar)
+    this.navCtrl.push(paginaPar)
   }
   
   back(){
-    this.subNav.pop();
+    this.navCtrl.pop();
   }
 
   close(event, fabbtn: FabContainer){

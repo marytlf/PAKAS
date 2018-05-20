@@ -15,16 +15,25 @@ profile-crud {
         max-height: 100px !important; //any size
     }
     .back-btn{
-        width: 90%;
-        left: 0; 
+        color: color($colors, light);
+        display: flex;
+        position: absolute;
+        left: 0;
+        top: 10px;
     }
 
     .edit-btn{
-        width: 0%;
-        right: 0; 
+        color: color($colors, light);
+        display: flex;
+        position: absolute;
+        right: 0;
+        top: 10px;
     }
 
     .card-md {
+        display: flex;
+        position: absolute;
+        top: 20px;
         padding-top: 50px;
         margin: 10px;
         border-radius: 2px;
