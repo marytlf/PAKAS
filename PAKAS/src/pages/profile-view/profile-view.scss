@@ -1,4 +1,7 @@
 profile-view {
 
+    ion-input, ion-textarea {
+        border-bottom: 1px solid color($colors, light);
+    }
    
 }

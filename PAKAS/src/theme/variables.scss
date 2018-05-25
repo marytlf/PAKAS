@@ -41,6 +41,7 @@ $colors: (
   light:      #9a88c6,
   dark:       #3e3167,
   textColor: #ffffff,
+  textColorGrey: rgb(104, 102, 102),
 );
 
 
@@ -56,9 +57,6 @@ $colors: (
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here
-
-
-
 
 // App Windows Variables
 // --------------------------------------------------
@@ -83,7 +81,6 @@ $colors: (
 // http://ionicframework.com/docs/ionicons/
 
 @import "ionic.ionicons";
-
 
 // Fonts
 // --------------------------------------------------

@@ -24,7 +24,8 @@ export class ProfileViewPage {
     public email;
     public password;
     public birthdayDate;
-
+    public bio;
+    public site;
     public editFlag: boolean = true;
 
     public userData = [{
@@ -34,6 +35,9 @@ export class ProfileViewPage {
         email: '',
         password:'',
         birthdayDate:'',
+        emailRec:'',
+        bio:'',
+        site:'',
       }]
 
   constructor(public navCtrl: NavController, 
@@ -77,14 +81,14 @@ export class ProfileViewPage {
 
   async save(){
       try{
-          console.log('doc='+this.userData[0]);
-
         let updateUser = await this.firebase.db().collection("users").doc(this.users[0]).update({
             name: this.userData["name"],
             lastName: this.userData["lastName"],
             username: this.userData["username"],
             password: this.userData["password"],
-           
+            email: this.userData["email"],
+            bio: this.userData["bio"],
+            site: this.userData["site"],
         });
         this.navCtrl.popToRoot();
       }catch(e){

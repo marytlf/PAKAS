@@ -1,53 +1,69 @@
 <ion-toolbar>
-    <span style="position: relative; display: flex;">
-        <div class="back-btn">
-            <button clear ion-button (click)="back()">
-                <i class="material-icons">arrow_back_ios</i>
-            </button>
-        </div>
-        <div class="edit-btn" style="display:  flex; position:  absolute; right: 0;">
-            <button clear ion-button (click)="save()">
-                <i class="material-icons">done</i>
-            </button>
-        </div>
-    </span>
+
+    <ion-buttons left>
+        <button clear ion-button (click)="backSave()" color="light">
+            <i class="material-icons">chevron_left</i>
+        </button>
+    </ion-buttons>
+    
+
+    <ion-buttons right>
+        <button clear ion-button (click)="save()" color="light">
+            <i class="material-icons">done</i>
+        </button>
+    </ion-buttons>
+    
+
 </ion-toolbar>
 
 <ion-content style="display: flex; position: absolute; top: 12%;">
-
+        <ion-avatar small>
+                <img  class="img-profile" src="assets/imgs/profilepic.jpeg">
+        </ion-avatar>  
+       
         <ion-card>
-
             <ion-grid>
                 <ion-row>
-                    <ion-col>
-                            
-                        <ion-avatar item-start large>
-                            <img  style="border-radius: 60px" src="assets/imgs/profilepic.jpeg">
-                        </ion-avatar>
+                    <ion-col col-1 no-padding>
+                        <i class="material-icons icon-form">description</i>  
+                        <i class="material-icons icon-form">public</i>   
+                        <i class="material-icons icon-form">star_border</i>                 
+                    </ion-col>
+                    <ion-col auto>
+                        <span class="user-rt-form">
+                            <ion-input style="font-size: 1.5rem;" placeholder="bio" type = "text" [(ngModel)]="userData.bio">{{userData.bio}}</ion-input>
+                            <ion-input style="font-size: 1.5rem;" placeholder="site" type = "text" [(ngModel)]="userData.site">{{userData.site}}</ion-input>
+                            <ion-input style="font-size: 1.5rem" type = "text" [(ngModel)]="userData.username">{{userData.username}}</ion-input>
                            
-                    </ion-col>
-                    <ion-col>
-                        <ion-input style="font-size: 2rem" type = "text" [(ngModel)]="userData.name">{{userData.name}}</ion-input>
-                    </ion-col>
-                </ion-row>
-                <ion-row>
-                    <ion-col>
-                            <ion-label floating>username:</ion-label>
-                            
-                            <ion-input type = "text" [(ngModel)]="userData.username">@{{userData.username}}</ion-input>
+                        </span> 
                     </ion-col>
                 </ion-row>
             </ion-grid>
+             
+        </ion-card>
 
+        <ion-card>
+            <ion-grid>
+                <ion-row>
+                    <ion-col col-1 no-padding>
+                        <i class="material-icons icon-form">person</i>  
+                        <i class="material-icons icon-form">person_outline</i> 
+                        <i class="material-icons icon-form">alternate_email</i>
+                    </ion-col>
+                    <ion-col auto>
+                        <span class="user-rt-form">
+                            <ion-input style="font-size: 1.5rem;" type = "text" [(ngModel)]="userData.name">{{userData.name}}</ion-input>
+                            <ion-input style="font-size: 1.5rem" type = "text" [(ngModel)]="userData.lastName">{{userData.lastName}}</ion-input>
+                            <ion-input style="font-size: 1.5rem" type = "text" [(ngModel)]="userData.email">{{userData.email}}</ion-input>
+                        </span>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-card>
             
-                <ion-item text-wrap>
-                  <p>Bio: Happy alpaca does happy alpaca things.</p>
-                  <p>Website: http://google.com</p>
-                </ion-item>      
-            </ion-card>
-        
-
-
+           
+                
+                    
 </ion-content>
 
 
