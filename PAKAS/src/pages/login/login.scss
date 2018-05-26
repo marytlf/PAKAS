@@ -35,15 +35,13 @@ page-login{
        padding: 0px;
    }
     
-   
 }
 
 
 .scroll-content{
-    overflow-y: hidden;
+    
     background-color: color($colors,primary);
 }
-
 
 
 .item{
@@ -68,7 +66,6 @@ page-login{
 
 .forget-label .label-md{
     color: color($colors, textColor);
-    top: 10%;
     font-weight: bold;
     :focus{
         color: color($colors, textColor);
@@ -79,9 +76,9 @@ page-login{
     flex-wrap: inherit;
     top: 10px;
 }
-.grid{
-    top: 180%;
-    position: relative;
+.grid-login{
+    top: 90%;
+    position: fixed;
 }
 
 .input-cover{

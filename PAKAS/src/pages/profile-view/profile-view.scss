@@ -3,5 +3,10 @@ profile-view {
     ion-input, ion-textarea {
         border-bottom: 1px solid color($colors, light);
     }
-   
+    .user-rt-form{
+        .text-input-md{
+            color: color($colors, dark);
+        }
+        
+    }
 }

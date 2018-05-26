@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, App, AlertController, ToastController, ModalController} from 'ionic-angular';
+
+import { IonicPage, NavController, NavParams, App, AlertController, ToastController, ModalController, Content} from 'ionic-angular';
 import { UsuarioProvider } from '../../providers/usuario/usuario';
 import { FirebaseProvider } from '../../providers/firebase/firebase';
+import { Component } from '@angular/core';
 
 /**
  * Generated class for the TopicoPage page.
@@ -61,6 +62,9 @@ export class ComunityPage {
     ionViewDidLoad() {
         console.log('ionViewDidLoad ComunityPage');
     }
+
+
+
 
     open(paginaPar){
         this.pagina = paginaPar;

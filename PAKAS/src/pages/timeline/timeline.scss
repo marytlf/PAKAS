@@ -98,21 +98,8 @@ page-timeline {
         transform: translateX(600%);
     }
 
-    .btn-star {
-        
-        text-align: right;
-        font-family: inherit;
-        font-style: inherit;
-        font-variant: inherit;
-        line-height: 1;
-        text-transform: none;
-        cursor: pointer;
-        -webkit-appearance: button;
-        background-color: transparent;
-        position:fixed;
-        border-bottom: 2px solid transparent!important;
-        padding: 0px;
-        width: 97%;
-        
+    .timeline{
+        position: relative;
+        top: 13%;
     }
 }

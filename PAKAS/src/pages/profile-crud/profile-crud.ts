@@ -1,8 +1,9 @@
-import { Component, ViewChild } from '@angular/core';
+
 import { IonicPage, NavController, NavParams, App, ViewController, FabContainer, ModalController, ToastController, AlertController } from 'ionic-angular';
 import { FirebaseProvider } from '../../providers/firebase/firebase';
 import { UsuarioProvider } from '../../providers/usuario/usuario';
 import { Content } from 'ionic-angular';  
+import { Component } from '@angular/core';
 
 /**
  * Generated class for the ProfileCrudPage page.
@@ -18,9 +19,10 @@ import { Content } from 'ionic-angular';
 })
 export class ProfileCrudPage {
  // @ViewChild ('subNav') subNav: NavController;
-  @ViewChild(Content) content: Content;
+
   public pagina: any = "";
 
+  
   public user = {
     username:'',
     name:'',
@@ -48,11 +50,6 @@ export class ProfileCrudPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad ProfileCrudPage');
   }
-
-  scrollToTop() {
-    this.content.scrollToTop();
-  }
-
 
   open(paginaPar){
     this.navCtrl.push(paginaPar)

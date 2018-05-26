@@ -1,33 +1,34 @@
 <ion-toolbar>
 
-  <button clear ion-button (click)="back()" no-padding>
-    <i class="material-icons">arrow_back_ios</i>
-  </button>
+        <ion-buttons left>
+            <button clear ion-button (click)="back()" color="light">
+                <i class="material-icons">chevron_left</i>
+            </button>
+        </ion-buttons>
 
 </ion-toolbar>
 
-
-<div class="timeline" >
-
-<ion-card *ngFor="let comunity of comunities">
-    <ion-card-content>
-      <div class="fab-follow">
-          <button clear small icon-only class="btn-star">
-            <i class="material-icons">star_border</i>
-          </button>
-      </div>
-      <ion-avatar item-start>
-        <img [src]="avatar" class="ion-avatar-mg">
-        <div class="title-group"> 
-            <ion-card-title>{{comunity.name}}</ion-card-title>
-            <p>
-              {{comunity.description}}
-            </p>
-        </div>			
-      </ion-avatar>
-      
-      
-    </ion-card-content>
-  </ion-card>
-</div>
+<ion-content no-padding>
+    
+        <div class="timeline" >
+            <ion-card *ngFor="let comunity of comunities">
+                <ion-grid>
+                    <ion-row>
+                        <ion-col>
+                                <ion-avatar item-start>
+                                        <img [src]="avatar" class="ion-avatar-mg">
+                                        <div class="title-group"> 
+                                            <ion-card-title>{{comunity.name}}</ion-card-title>
+                                            <p>
+                                                {{comunity.description}}
+                                            </p>
+                                        </div>			
+                                </ion-avatar>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+             </ion-card>
+        </div>
+        
+</ion-content>
 

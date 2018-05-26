@@ -43,4 +43,5 @@ export class ListComunityPage {
       fabbtn.close();
   }
 
+
 }

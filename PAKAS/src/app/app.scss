@@ -51,7 +51,6 @@ ion-toolbar {
 }
 
 
-
 .btn-nav{
     display: flex;
 
@@ -164,13 +163,13 @@ ion-icon {
 }
 
 .btn-group {
-   
-    top: 55%;
-    //border: 4px solid transparent;
-    padding-bottom: 10px;
-    padding-top: 10px;
-
     .button-md{
+        top: 70%;
+        position: fixed;
+        width: 96%;
+        margin: 5px;
+        padding-left: 0px;
+        padding-right: 0px;
         box-shadow: none;
         border-width: 1px;
         border-style: solid;
@@ -225,17 +224,14 @@ ion-icon {
 .lbl-style{
     font-weight: 400;
     text-transform: uppercase;
-    height: 30%;
     margin: 0px 0px 0px 0px;
 }
-
 
 .scroll-content{
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
-    position: absolute;
     z-index: 1;
     display: block;
     overflow-x: hidden;
@@ -245,6 +241,10 @@ ion-icon {
     contain: size style layout;
 }
 
+ion-scroll {
+    white-space: nowrap;
+    height: 250px;
+}
 
     .item-inner{
         border-bottom: none!important;
@@ -296,7 +296,7 @@ ion-icon {
    }   
 }
 .text-input-md{
-    color:color($colors,textColorGrey);
+    color:color($colors,textColor);
 }
 
         //card
