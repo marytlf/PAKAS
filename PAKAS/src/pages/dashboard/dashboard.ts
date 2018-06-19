@@ -4,6 +4,7 @@
 	import { UsuarioProvider } from '../../providers/usuario/usuario';
 	import { FirebaseProvider } from '../../providers/firebase/firebase';
 	import { LoginPage } from '../login/login';
+import { Camera } from '@ionic-native/camera';
 
 	/**
 	* Generated class for the DashboardPage page.
@@ -26,7 +27,7 @@
 	public fabhide : boolean = false;
 	public hide: boolean = false;
 	public avatar = "assets/imgs/alp1.png";
-
+    public foto = '';
 
 	constructor(public navCtrl: NavController, 
 	public navParams: NavParams, 
@@ -36,23 +37,15 @@
 	public usuario: UsuarioProvider,
 	public modalCtrl: ModalController,
 	public toastCtrl: ToastController,
-	public alert: AlertController
+    public alert: AlertController,
+    public camera: Camera,
+    
 	) {
 	}
 
 	ionViewDidLoad() {
 		console.log('ionViewDidLoad DashboardPage');
 		//console.log(this.subNav)
-	}
-
-	openFab(){
-		document.getElementById("cthheart").style.transformOrigin = "10px";
-	}
-
-
-	openNotf(){
-		document.getElementById("mySidenav").style.height = "220px";
-		this.hide = true;
 	}
 
 	open(paginaPar){
@@ -74,6 +67,27 @@
 		}catch(e){
 			throw new Error(e);
 		}
-	}
+    }
+    
+
+    async tirarFoto(){
+        try{
+            let opcoes = {
+                quality: 95,
+                destinationType:this.camera.DestinationType.DATA_URL,
+                encodingType: this.camera.EncodingType.JPEG,
+                mediaType: this.camera.MediaType.PICTURE
+            };
+    
+            let captura = await this.camera.getPicture(opcoes);
+            this.foto = 'data:image/jpeg;base64,' + captura;
+            console.log(this.foto);
+        }catch(e){
+            throw new Error(e);
+        }
+        
+
+    }
+
 
 	}

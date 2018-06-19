@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Platform } from 'ionic-angular';
+import { Platform, App } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
@@ -11,6 +11,7 @@ import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { FirebaseProvider } from '../providers/firebase/firebase';
 
+
 @Component({
   templateUrl: 'app.html',
 })
@@ -20,6 +21,7 @@ export class MyApp {
     public rootPage:any = "LoginPage";
 
   constructor(public firebase: FirebaseProvider,
+            public appCtrl: App,
             platform: Platform, 
             statusBar: StatusBar, 
             splashScreen: SplashScreen,
@@ -43,14 +45,20 @@ export class MyApp {
       }
     );
   }
-  eopen(paginaPar){
-      this.rootPage = paginaPar;
-  }
+
 
   open(paginaPar) {
     // Let's navigate from TabsPage to Page1
     this.nav.push(paginaPar);
  }
-  
+ async logout(){
+    try{
+        await this.firebase.auth().signOut();
+        this.appCtrl.getRootNav().setRoot('LoginPage');
+    }catch(e){
+        throw new Error(e);
+    }
+}
+
 }
 

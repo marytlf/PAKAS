@@ -11,6 +11,7 @@ import { FirebaseProvider } from '../providers/firebase/firebase';
 import { UsuarioProvider } from '../providers/usuario/usuario';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
+import { Camera } from '@ionic-native/camera'
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { HttpClientModule } from '@angular/common/http';
   providers: [
     StatusBar,
     SplashScreen,
+    Camera,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     FirebaseProvider,
     UsuarioProvider
