@@ -15,9 +15,15 @@ import { FirebaseProvider } from '../providers/firebase/firebase';
   templateUrl: 'app.html',
 })
 export class MyApp {
-  public rootPage:any = "LoginPage";
+    @ViewChild('myNav') nav: NavController
 
-  constructor(public firebase: FirebaseProvider, platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
+    public rootPage:any = "LoginPage";
+
+  constructor(public firebase: FirebaseProvider,
+            platform: Platform, 
+            statusBar: StatusBar, 
+            splashScreen: SplashScreen,
+            ) {
     
 
     platform.ready().then(() => {
@@ -37,7 +43,14 @@ export class MyApp {
       }
     );
   }
+  eopen(paginaPar){
+      this.rootPage = paginaPar;
+  }
 
+  open(paginaPar) {
+    // Let's navigate from TabsPage to Page1
+    this.nav.push(paginaPar);
+ }
   
 }
 

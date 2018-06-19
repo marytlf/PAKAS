@@ -8,78 +8,67 @@
         
     
         <ion-buttons right>
-            <button clear ion-button (click)="save()" color="light">
+            <button clear ion-button (click)="addComunity()" color="light">
                 <i class="material-icons">done</i>
             </button>
         </ion-buttons>
-        
-    
-    </ion-toolbar>
+</ion-toolbar>
 
 
 
 
-<ion-content padding class="bgn-t">
-
-<ion-item>
-      <ion-list class="pakas-insert">
-          <img [src] = "logopakas">
-      </ion-list>
-</ion-item>
-
-<ion-card>
-    <ion-list>
-
-        <ion-item class="form-group-user">
-            <ion-label floating>nome:</ion-label>
-            <ion-input type = "text"  [(ngModel)]="name"></ion-input>
-        </ion-item>
-        <ion-item class="form-group-user">
-            <ion-label floating>descrição:</ion-label>
-            <ion-input type = "text" [(ngModel)]="description"></ion-input>
-        </ion-item>
-        <ion-item class="form-group-user">
-            <ion-label>{{categoria}}</ion-label>
-            <ion-select [(ngModel)]="selectResult">
-                <ion-option *ngFor="let category of categories">
-                    {{category}}
-                </ion-option>
-            </ion-select>
-        </ion-item>
-    </ion-list>
-</ion-card>
+<ion-content no-padding class="bgn-t">
+    <ion-avatar small>
+        <img  class="img-profile" src="assets/imgs/alp3.png">
+    </ion-avatar>  
+<div>
+        <ion-card>
+                <ion-grid>
+                    <ion-row>
+                        <ion-col col-1 no-padding>
+                            <i class="material-icons icon-form">description</i>  
+                            <i class="material-icons icon-form">public</i>   
+                            <i class="material-icons icon-form">star_border</i>                 
+                        </ion-col>
+                        <ion-col auto>
+                            <span class="user-rt-form">
+                                <ion-input style="font-size: 1.5rem;" placeholder="nome" type = "text" [(ngModel)]="name">{{name}}</ion-input>
+                                <ion-input style="font-size: 1.5rem;" placeholder="descrição" type = "text" [(ngModel)]="description">{{description}}</ion-input>
+                                <ion-input style="font-size: 1.5rem" placeholder="tags" type = "text" [(ngModel)]="tags">{{tags}}</ion-input>
+                            </span> 
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-label>{{selectResult}}</ion-label>
+                        <ion-select [(ngModel)]="selectResult">
+                            <ion-option *ngFor="let category of categories">
+                                {{category}}
+                            </ion-option>
+                        </ion-select>    
+                    </ion-row>
+                </ion-grid>    
+            </ion-card>
+</div>
+   
 
     <ion-card>
-        <ion-list>
-                <ion-item class="form-group-user">
-
-                        <ion-label>tipo:</ion-label>
-                            <ion-select [(ngModel)]="selectType">
-                                <ion-option value="public">Publico</ion-option>
-                                <ion-option value="private">Privado</ion-option>
-                            </ion-select>
-                    </ion-item>
-                    <ion-item class="form-group-user">
-                        <ion-label>idioma:</ion-label>
-                            <ion-select [(ngModel)]="selectLanguage">
-                                <ion-option value="pt-br">Português(BR)</ion-option>
-                                <ion-option value="eg-us">English (US)</ion-option>
-                                <ion-option value="others">Others</ion-option>
-                            </ion-select>
-                        </ion-item>
-                    <ion-item class="form-group-user">
-                                <ion-label floating>tags <br> <p style="font-size: 10px">(Ex: meme, funny, college):</p></ion-label>
-                                <ion-input type = "text" [(ngModel)]="tags"></ion-input>
-                            </ion-item>
-                    <ion-item>
-                        <div class = "btn-inside">
-                            <button ion-button round block small (click)="addComunity()">
-                                Criar!
-                            </button>   
-                        </div> 
-                    </ion-item>
-        </ion-list>
+        <ion-grid>
+            <ion-row auto>
+                    <ion-label>{{selectType}}:</ion-label>
+                    <ion-select [(ngModel)]="selectType">
+                        <ion-option value="Publico">Publico</ion-option>
+                        <ion-option value="Privado">Privado</ion-option>
+                    </ion-select>
+            </ion-row>
+            <ion-row auto>
+                    <ion-label>{{selectLanguage}}:</ion-label>
+                    <ion-select [(ngModel)]="selectLanguage">
+                        <ion-option value="PT-BR">Português(BR)</ion-option>
+                        <ion-option value="EG-US">English (US)</ion-option>
+                        <ion-option value="Outros">Outros</ion-option>
+                    </ion-select>
+            </ion-row>
+        </ion-grid>
     </ion-card>
-              
 
 </ion-content>

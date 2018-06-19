@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ModalController, ToastController, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController, ToastController, AlertController, ViewController, App } from 'ionic-angular';
 import { FirebaseProvider } from '../../providers/firebase/firebase';
 import { UsuarioProvider } from '../../providers/usuario/usuario';
 
@@ -46,7 +46,9 @@ export class ProfileViewPage {
     public usuario: UsuarioProvider,
     public modalCtrl: ModalController,
     public toastCtrl: ToastController,
-    public alert: AlertController) {
+    public alert: AlertController,
+    public viewCtrl: ViewController,
+    public appCtrl: App) {
         this.getUserData();
     }
 
@@ -55,7 +57,7 @@ export class ProfileViewPage {
   }
 
   back(){
-    this.navCtrl.popToRoot();
+    this.navCtrl.pop();
   }
 
   async getUserData(){

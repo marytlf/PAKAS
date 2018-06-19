@@ -20,9 +20,9 @@ export class ComunityPage {
 
     language: any;
     public categoria = "categoria";
-    public selectResult = '';
-    public selectType = '';
-    public selectLanguage = '';
+    public selectResult = 'categoria';
+    public selectType = 'tipo';
+    public selectLanguage = 'idioma';
 
     public comunities = [];
     public name = '';
@@ -30,19 +30,19 @@ export class ComunityPage {
     public tags = '';
 
     public categories = [
-        "Music",
-        "Food",
-        "Places",
+        "Música",
+        "Comida",
+        "Lugares",
         "LGBT",
-        "Games",
+        "Jogos",
         "How-to",
-        "Funny",
-        "Adult",
-        "Pop & Culture",
+        "Divertido",
+        "Adulto",
+        "Pop & Cultura",
         "Comics & Cartoons",
-        "Politics & Society",
-        "Movies & TV Shows",
-        "Technology & Education"
+        "Política & Sociedade",
+        "Filmes & Séries",
+        "Tecnologia & Educação"
     ]
 
     public logopakas = 'assets/imgs/pakas.png';
@@ -91,6 +91,15 @@ export class ComunityPage {
         type: this.selectType,
         user_id: this.usuario.get().uid
       });
+        
+        let toastSucess= this.toastCtrl.create({
+            message: "Comunidade cadastrada com sucesso!",
+            duration: 2000,
+            position: 'bottom'
+        });
+    toastSucess.present();
+    this.back();
+    
     }catch(e){
       let janela = this.alert.create({
         title: "Opa! Um erro foi detectado!"

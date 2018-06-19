@@ -1,7 +1,59 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-nav #myNav [root]="rootPage"></ion-nav>
 
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
 rel="stylesheet">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.11/css/all.css" integrity="sha384-p2jx59pefphTFIpeqCcISO9MdVfIm4pNnsL08A6v5vaQc4owkQqxMV8kg4Yvhaw/" crossorigin="anonymous">
 
+
+<div class="fb-list">
+        <ion-fab mini bottom center #fabbtn margin-bottom="5px">
+                
+                <button color="primary" ion-fab id="btn-active">
+                        <i class="material-icons">add</i>
+                </button>
+                
+                    <ion-fab-list side="left" (click)="fabbtn.close()" >
+                            <button ion-button outline (click) = "open('ProfileViewPage')">
+                                    <i class="material-icons">face</i>
+                            </button>
+                            <button ion-button outline (click) = "open('ComunityPage')" >
+                                    <i class="material-icons">add</i>
+                            </button>
+                            <button ion-button outline (click) = "logout()">
+                                    <i class="material-icons">power_settings_new</i>
+                            </button>
+        
+                    </ion-fab-list>
+        
+                    <ion-fab-list side="right" (click)="fabbtn.close()" >
+                            <button ion-button outline (click) = "open('TimelinePage')">
+                                    <i class="material-icons">star_border</i>
+                            </button>
+                        
+                            <button ion-button outline (click) = "open('Topics')">
+                                    <i class="material-icons">favorite_border</i>
+                            </button>
+                            
+                            <button ion-button outline (click) = "open('DashboardPage')">
+                                    <i class="material-icons">home</i>
+                            </button>
+                            
+                    </ion-fab-list>
+        
+            </ion-fab>
+    </div>
+    
+    
+<ion-footer>
+        <div class="tab-bottom">
+                <div class="tab-nav-left">
+                </div>
+            
+                <div class="tab-nav-right">
+                </div>
+            </div>
+</ion-footer>
+
+
+   

@@ -8,42 +8,8 @@ page-dashboard {
         top: -25px;
     }
 
-    .tab-bottom {
-        display: flex;
-        width: 100%;
-        flex-direction: row;
-        background: #eee;
-        border-top: 1px solid #ccc;
-        position: absolute;
-        bottom: 0;
-        padding: 5px;
-        justify-content: space-between;
-        z-index: 99;
-    }
 
-    .tab-nav-left {
-        margin-right: 10px;
-        width: 50%;
-        text-align: center;
-        display:  flex;
-        align-content: center;
-        justify-content: center;
-        position: sticky;
-        bottom: 0;
-        z-index: 110;
-    }
-    .tab-nav-right {
-        margin-left: 10px;
-        width: 50%;
-        text-align: center;
-        display:  flex;
-        align-content: center;
-        justify-content: center;
-        position: sticky;
-        bottom: 0;
-        z-index: 110;
-    }
-
+.fb-list{
     .button-outline-md{
         border-width: 1px;
         border-style: solid;
@@ -73,6 +39,8 @@ page-dashboard {
         }
 
     }
+}
+    
 
 
 
