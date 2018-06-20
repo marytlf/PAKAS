@@ -26,6 +26,9 @@ export class FirebaseProvider {
       messagingSenderId: "21534089992"
     };
     firebase.initializeApp(config);
+
+    var storage = firebase.app().storage("gs://pakas-app.appspot.com");
+
   }
 
   db(){
@@ -36,6 +39,10 @@ export class FirebaseProvider {
   auth(){
     console.log(firebase.auth());
     return firebase.auth();
+  }
+
+  storage(){
+    return firebase.storage();
   }
 
 }

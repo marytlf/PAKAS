@@ -19,17 +19,38 @@
                     <ion-row>
                         <ion-col>
                                 <ion-avatar item-start>
-                                        <img [src]="avatar" class="ion-avatar-mg">
-                                        <div class="title-group"> 
-                                            <ion-card-title>{{comunity.name}}</ion-card-title>
-                                            <p>
-                                                {{comunity.description}}
-                                            </p>
-                                        </div>			
+                                        <img id="result" [src]="avatar" class="ion-avatar-mg">	
                                 </ion-avatar>
                         </ion-col>
                         <ion-col>
-                            
+                            <div class="title-group"> 
+                                <ion-card-title>{{comunity.name}}</ion-card-title>
+                                <p>
+                                    {{comunity.description}}
+                                </p>
+                            </div>		
+                        </ion-col>
+                        <ion-col no-padding>
+                            <ion-row>
+                                    <ion-label style="font-size: 1.2rem" *ngIf="follow">
+                                        - Deixar de Participar
+                                    </ion-label>
+                                    <ion-label style="font-size: 1.3rem" *ngIf="!follow">
+                                        + Participar
+                                    </ion-label>
+                            </ion-row>
+                           
+                            <ion-row>
+                                <button ion-button small clear no-padding style="overflow: hidden;     
+                                display: contents;
+                                position: absolute;
+                                width: 100%;
+                                text-align: end;" (click)="socialSharing(comunity)">
+                                        <i class="material-icons icon-form" style="text-align: right" no-padding>share</i>
+                                </button>
+                            </ion-row>
+                
+                        
                         </ion-col>
                     </ion-row>
                 </ion-grid>

@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, FabContainer, ModalController, Toa
 import { UsuarioProvider } from '../../providers/usuario/usuario';
 import { FirebaseProvider } from '../../providers/firebase/firebase';
 import { CommonModule } from '@angular/common';
+import { SocialSharing } from '@ionic-native/social-sharing';
 
 /**
  * Generated class for the TimelinePage page.
@@ -26,6 +27,8 @@ export class TimelinePage {
   public description = '';
   public language = '';
   public tags = '';
+  public follow: boolean = false; //false = nao segue, true = segue
+
 
 
   constructor(public navCtrl: NavController,
@@ -34,7 +37,8 @@ export class TimelinePage {
     public usuario: UsuarioProvider,
     public modalCtrl: ModalController,
     public toastCtrl: ToastController,
-    public alert: AlertController
+    public alert: AlertController,
+    public social: SocialSharing,
     ) {
       this.listComunities();
   }
@@ -63,5 +67,34 @@ export class TimelinePage {
     })
   }
 
+  getImagesComunity(){
+      
+    var storage = this.firebase.storage().ref();
+    var imagesRef = storage.child('imgs/');
+    var imagesRefPac = storage.child('imgs/profilepic.jpeg');
+   
+    let img = "assets/imgs/profilepic.jpeg"
+    let imgBlob = new Blob([img], { type: 'image/*' });
+    imagesRef.put(imgBlob)
+    
+  }
 
+
+  socialSharing(comunity){
+      try{
+        this.social.share(comunity,null,null,null);
+        
+      }catch(e){
+        let janela = this.toastCtrl.create({
+            message: "Opa! Um erro foi detectado!",
+            duration:2000
+          });
+          janela.present();
+    
+          throw new Error(e);
+      }
+    
+      
+     
+  }
 }

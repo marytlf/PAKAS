@@ -12,6 +12,7 @@ import { UsuarioProvider } from '../providers/usuario/usuario';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { Camera } from '@ionic-native/camera'
+import { SocialSharing } from '@ionic-native/social-sharing';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { Camera } from '@ionic-native/camera'
     StatusBar,
     SplashScreen,
     Camera,
+    SocialSharing,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     FirebaseProvider,
     UsuarioProvider
