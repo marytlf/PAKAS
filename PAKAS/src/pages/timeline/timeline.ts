@@ -92,9 +92,14 @@ export class TimelinePage {
           janela.present();
     
           throw new Error(e);
-      }
-    
-      
-     
+      }   
   }
+
+  followComunity(){
+    
+  }
+
+
+
+
 }

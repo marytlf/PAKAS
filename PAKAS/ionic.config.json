@@ -1,6 +1,6 @@
 {
-  "name": "pakasv2",
-  "app_id": "",
+  "name": "PAKAS",
+  "app_id": "468122436975940",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}

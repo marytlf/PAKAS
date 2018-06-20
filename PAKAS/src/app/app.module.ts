@@ -14,6 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { Camera } from '@ionic-native/camera'
 import { SocialSharing } from '@ionic-native/social-sharing';
 
+import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -41,6 +43,7 @@ import { SocialSharing } from '@ionic-native/social-sharing';
     SplashScreen,
     Camera,
     SocialSharing,
+    Facebook,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     FirebaseProvider,
     UsuarioProvider
